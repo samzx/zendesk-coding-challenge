@@ -4,8 +4,9 @@ import ReactDOM from 'react-dom';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
-import Table from './components/Table';
 import Header from './components/Header';
+import Drawer from './components/Drawer';
+import Desk from './components/Desk';
 
 const url = 'http://localhost:8081/';
 
@@ -13,7 +14,7 @@ class App extends React.Component {
     state = {
         data: null,
         loading: true,
-        errors: null
+        errors: null,
     }
 
     componentDidMount() {
@@ -39,17 +40,15 @@ class App extends React.Component {
     }
 
     render() {
+        const {data, errors, loading} = this.state;
         return (
             <div>
-                <Header />
+                <Header loading={loading} errors={errors} />
                 {
-                    this.state.errors && <p>{this.state.erros}</p>
+                    errors && <p>{errors}</p>
                 }
-                {this.state.loading && <p>{"Loading..."}</p>}
-                {
-                    this.state.data &&
-                    <Table data={this.state.data.tickets} />
-                }
+                {loading && <p>{"Loading..."}</p>}
+                <Drawer data={data} />
             </div>
         );
     }
