@@ -7,7 +7,6 @@ const app = express();
 let ticket_id;
 const url = 'https://solexstudios.zendesk.com';
 const tickets = '/api/v2/tickets.json';
-const comments = `/api/v2/tickets/${ticket_id}/comments.json`;
 const username = "team@solexstudios.com";
 const password = "solexstudios";
 
@@ -42,14 +41,12 @@ const server = app.listen(8081, () => {
             }
         })
         .then((json) => {
-            console.log(json);
             res.send(json);
             const delta = new Date().getTime() - start;
             console.log(`Response sent after ${delta} ms`);
         })
         .catch((e) => {
             console.log("Failed to get requested resource.");
-            console.log(e)
             res.status(e.status);
             res.send(e);
         })
@@ -57,10 +54,10 @@ const server = app.listen(8081, () => {
 
     // TODO: Get comments for a ticket.
     app.get('/comments/:id', (req, res) => {
-        ticket_id = req.param.id;
+        const comments = `/api/v2/tickets/${req.params.id}/comments.json`;
         const start = new Date().getTime();
-        console.log("Handling request...")
-        fetch(url + comments , {
+        console.log("Handling request...");
+        fetch(url + comments, {
             method: 'GET',
             headers: {
                 "Authorization": auth
@@ -70,7 +67,7 @@ const server = app.listen(8081, () => {
             if(response.ok){
                 return response.json();
             } else {
-                throw 'Bad response';
+                throw response;
             }
         })
         .then((json) => {
@@ -84,5 +81,4 @@ const server = app.listen(8081, () => {
             res.send(e);
         })
     });
-
 })

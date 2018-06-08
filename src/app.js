@@ -8,9 +8,9 @@ import Header from './components/Header';
 import Drawer from './components/Drawer';
 import Desk from './components/Desk';
 
-const url = 'http://localhost:8081';
-const tickets = '/tickets';
-const comments = '/comments'
+export const url = 'http://localhost:8081';
+export const tickets = '/tickets';
+export const comments = '/comments'
 
 class App extends React.Component {
     state = {
@@ -18,10 +18,16 @@ class App extends React.Component {
         loading: true,
         errors: null,
         currentTicket: null,
+        comments: null,
+        loadingComments: false,
     }
 
     setTicket = (id) => {
         this.setState({currentTicket: id});
+    }
+
+    setComments = (comments) => {
+        this.setState({comments});
     }
 
     componentDidMount() {
@@ -64,9 +70,11 @@ class App extends React.Component {
                     <Drawer
                         data={data}
                         setTicket={this.setTicket}
+                        setComments={this.setComments}
                     />
                     <Desk
                         currentTicket={this.state.currentTicket}
+                        comments={this.state.comments}
                         data={data}
                     />
                 </div>
