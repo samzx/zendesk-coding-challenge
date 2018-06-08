@@ -38,24 +38,26 @@ const server = app.listen(8081, () => {
             if(response.ok){
                 return response.json();
             } else {
-                throw 'Bad response';
+                throw response;
             }
         })
         .then((json) => {
+            console.log(json);
             res.send(json);
             const delta = new Date().getTime() - start;
             console.log(`Response sent after ${delta} ms`);
         })
         .catch((e) => {
             console.log("Failed to get requested resource.");
-            res.status(401);
+            console.log(e)
+            res.status(e.status);
             res.send(e);
         })
     });
 
     // TODO: Get comments for a ticket.
-    app.get('/comments', (req, res) => {
-        ticket_id = req.body.id;
+    app.get('/comments/:id', (req, res) => {
+        ticket_id = req.param.id;
         const start = new Date().getTime();
         console.log("Handling request...")
         fetch(url + comments , {

@@ -17,6 +17,11 @@ class App extends React.Component {
         data: null,
         loading: true,
         errors: null,
+        currentTicket: null,
+    }
+
+    setTicket = (id) => {
+        this.setState({currentTicket: id});
     }
 
     componentDidMount() {
@@ -28,7 +33,7 @@ class App extends React.Component {
             if(res.ok) {
                 return res.json();
             } else {
-                throw res.statusText;
+                throw res;
             }
         })
         .then((json) => {
@@ -36,7 +41,7 @@ class App extends React.Component {
             console.log(Object.keys(json.tickets[0]));
         })
         .catch((e) => {
-            this.setState({ errors: e, loading: false });
+            this.setState({ errors: `${e.status} ${e.statusText}`, loading: false });
             console.log(e);
         });
     }
@@ -47,7 +52,7 @@ class App extends React.Component {
             <div className="app">
                 <Header loading={loading} errors={errors} />
                 {
-                    errors && <p>{errors}</p>
+                    errors && <p className="loading" >{errors}</p>
                 }
                 { 
                     loading &&
@@ -56,8 +61,14 @@ class App extends React.Component {
                     </div>
                 }
                 <div className="dashboard">
-                    <Drawer data={data} />
-                    <Desk />
+                    <Drawer
+                        data={data}
+                        setTicket={this.setTicket}
+                    />
+                    <Desk
+                        currentTicket={this.state.currentTicket}
+                        data={data}
+                    />
                 </div>
             </div>
         );

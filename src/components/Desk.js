@@ -7,7 +7,7 @@ class Desk extends React.Component {
     render() {
         return(
             <div className="desk">
-                <Details />
+                <Details currentTicket={this.props.currentTicket} data={this.props.data} />
                 <History />
             </div>
         );

@@ -4,11 +4,17 @@ class Listing extends React.Component {
     render() {
         const {item, index} = this.props;
         return(
-            <tr>
-                <td>{index+1}</td>
-                <td>{item.subject}</td>
-                <td>{item.created_at}</td>
-            </tr>
+            <div className="listing" onClick={() => {this.props.setTicket(this.props.id)}}>
+                <div className="listing-subject">
+                    <p>{item.subject}</p>
+                </div>
+                <div className="listing-time">
+                    <p>{item.created_at}</p>
+                </div>
+                <div className="listing-priority">
+                    <p>{item.priority}</p>
+                </div>
+            </div>
         );
     }
 }

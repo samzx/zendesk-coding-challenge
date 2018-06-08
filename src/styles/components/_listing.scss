@@ -1,0 +1,16 @@
+.listing {
+    height: 5rem;
+    border-bottom: 1px solid black;
+}
+
+.listing-subject {
+
+}
+
+.listing-time {
+    position: relative;
+}
+
+.listing > * > p{
+    margin: 0;
+}
