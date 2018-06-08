@@ -14,6 +14,9 @@ class Listing extends React.Component {
                 <div className="listing-priority">
                     <p>{item.priority}</p>
                 </div>
+                <div className="listing-type">
+                    <p>{item.type}</p>
+                </div>
             </div>
         );
     }

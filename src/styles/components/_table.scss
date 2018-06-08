@@ -1,4 +1,4 @@
 .ticket-list {
-    height: calc(100% - #{$filters-height} - #{$pagination-height});
+    height: calc(100% - #{$pagination-height});
     overflow-y: scroll;
 }
