@@ -7,10 +7,10 @@ const app = express();
 const server = app.listen(8081, () => {
 
     app.use((req, res, next) => {
-        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Origin", "http://localhost:8080");
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         next();
-        });
+    });
 
     const port = server.address().port
 
@@ -24,6 +24,8 @@ const server = app.listen(8081, () => {
     const auth = 'Basic ' + base64.encode(username + ":" + password);
 
     app.get('/', (req, res) => {
+        const start = new Date().getTime();
+        console.log("Handling request...")
         fetch(url + api , {
             method: 'GET',
             headers: {
@@ -31,12 +33,20 @@ const server = app.listen(8081, () => {
             }
         })
         .then((response) => {
-            return response.json();
+            if(response.ok){
+                return response.json();
+            } else {
+                throw 'Bad response';
+            }
         })
         .then((json) => {
             res.send(json);
+            const delta = new Date().getTime() - start;
+            console.log(`Response sent after ${delta} ms`);
         })
         .catch((e) => {
+            console.log("Failed to get requested resource.");
+            res.status(401);
             res.send(e);
         })
     });
