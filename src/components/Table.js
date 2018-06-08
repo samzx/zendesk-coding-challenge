@@ -7,6 +7,8 @@ class Table extends React.Component {
         return(
             <div className="ticket-list" >
                 <table>
+                {
+                    this.props.data &&
                     <tbody>
                         <tr>
                             <td></td>
@@ -14,11 +16,12 @@ class Table extends React.Component {
                             <td>Creation date</td>
                         </tr>
                         {
-                            this.props.data.map((item, index) => 
+                            this.props.data.tickets.map((item, index) => 
                                 <Listing item={item} index={index} key={`listing-${index}`}/>
                             )
                         }
                     </tbody>
+                }
                 </table>
             </div>
         );

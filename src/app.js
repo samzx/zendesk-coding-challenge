@@ -8,7 +8,9 @@ import Header from './components/Header';
 import Drawer from './components/Drawer';
 import Desk from './components/Desk';
 
-const url = 'http://localhost:8081/';
+const url = 'http://localhost:8081';
+const tickets = '/tickets';
+const comments = '/comments'
 
 class App extends React.Component {
     state = {
@@ -18,7 +20,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        fetch(url, {
+        fetch(url + tickets, {
             method: 'GET',
         })
         .then((res) => {
@@ -42,13 +44,21 @@ class App extends React.Component {
     render() {
         const {data, errors, loading} = this.state;
         return (
-            <div>
+            <div className="app">
                 <Header loading={loading} errors={errors} />
                 {
                     errors && <p>{errors}</p>
                 }
-                {loading && <p>{"Loading..."}</p>}
-                <Drawer data={data} />
+                { 
+                    loading &&
+                    <div className="loading" >
+                        <p>{"Loading..."}</p> 
+                    </div>
+                }
+                <div className="dashboard">
+                    <Drawer data={data} />
+                    <Desk />
+                </div>
             </div>
         );
     }

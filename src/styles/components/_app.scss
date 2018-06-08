@@ -1,0 +1,16 @@
+.app {
+    height: 100vh;
+}
+
+.dashboard {
+    display: flex;
+    height: calc(100vh - 4rem);
+}
+
+.loading {
+    font-size: 5rem;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    width: 100%;
+}

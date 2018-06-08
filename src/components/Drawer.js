@@ -1,15 +1,14 @@
 import React from 'react';
 
 import Table from './Table';
+import Pagination from './Pagination';
 
 class Drawer extends React.Component {
     render() {
         return(
             <div className="drawer">
-                {
-                    this.props.data && 
-                    <Table data={this.props.data.tickets} />
-                }
+                <Table data={this.props.data} />
+                <Pagination />
             </div>
         );
     }
