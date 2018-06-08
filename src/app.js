@@ -5,6 +5,7 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
 import Table from './components/Table';
+import Header from './components/Header';
 
 const url = 'http://localhost:8081/';
 
@@ -40,7 +41,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <h1>Zendesk Dashboard</h1>
+                <Header />
                 {
                     this.state.errors && <p>{this.state.erros}</p>
                 }
