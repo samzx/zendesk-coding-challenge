@@ -4,22 +4,25 @@ export const itemsPerPage = 25;
 
 class Pagination extends React.Component {
 
-    getPages = (items) => {
-        const numPages = Math.floor(items.length / itemsPerPage);
+    createPagination = (count) => {
+        const numPages = Math.floor(count / itemsPerPage);
         let arr = []
-        for(let i=0; i<numPages; i++) {
+        for(let i=1; i<=numPages; i++) {
             arr.push(i);
         }
         return (
-            arr.map((item) => 
+            arr.map((page) => 
                 <div
-                    key={`page-${item}`}
-                    onClick={() => this.props.setPage(item)}
+                    key={`page-${page}`}
+                    onClick={() => {
+                        this.props.setPage(page);
+                        this.props.fetchListings(page);
+                    }}
                 >
                     {
-                        this.props.currentPage == item ?
-                        <b>{item+1}</b> :
-                        item+1
+                        this.props.currentPage == page ?
+                        <b>{page}</b> :
+                        page
                     }
                 </div>
             )
@@ -31,7 +34,7 @@ class Pagination extends React.Component {
             <div className="pagination" style={{display: 'flex'}}>
                 {
                     this.props.data &&
-                    this.getPages(this.props.data.tickets)
+                    this.createPagination(this.props.data.count)
                 }
             </div>
         );

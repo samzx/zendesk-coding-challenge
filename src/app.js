@@ -18,6 +18,7 @@ class App extends React.Component {
         loading: true,
         errors: null,
         currentTicket: null,
+        currentPage: 1,
         comments: null,
         loadingComments: false,
     }
@@ -30,12 +31,15 @@ class App extends React.Component {
         this.setState({comments});
     }
 
-    componentDidMount() {
-        fetch(url + tickets, {
+    setPage = (currentPage) => {
+        this.setState({currentPage});
+    }
+
+    fetchListings = (page) => {
+        fetch(url + tickets + `/${this.state.currentPage}`, {
             method: 'GET',
         })
         .then((res) => {
-            console.log(res);
             if(res.ok) {
                 return res.json();
             } else {
@@ -43,13 +47,17 @@ class App extends React.Component {
             }
         })
         .then((json) => {
+            console.log(json);
             this.setState({ data: json, loading: false });
-            console.log(Object.keys(json.tickets[0]));
         })
         .catch((e) => {
             this.setState({ errors: `${e.status} ${e.statusText}`, loading: false });
             console.log(e);
         });
+    }
+
+    componentDidMount() {
+        this.fetchListings(1);
     }
 
     render() {
@@ -69,8 +77,11 @@ class App extends React.Component {
                 <div className="dashboard">
                     <Drawer
                         data={data}
+                        currentPage={this.state.currentPage}
                         setTicket={this.setTicket}
                         setComments={this.setComments}
+                        setPage={this.setPage}
+                        fetchListings={this.fetchListings}
                     />
                     <Desk
                         currentTicket={this.state.currentTicket}

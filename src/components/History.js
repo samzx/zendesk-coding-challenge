@@ -8,7 +8,7 @@ class History extends React.Component {
             {
                 this.props.comments &&
                 this.props.comments.map((item, index) => 
-                    <p key={`history-${index}`}>{item.body}</p>
+                    <div key={`history-${index}`}>{item.body}</div>
                 )
             }
             </div>

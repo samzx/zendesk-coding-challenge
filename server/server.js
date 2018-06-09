@@ -6,7 +6,6 @@ const app = express();
 
 let ticket_id;
 const url = 'https://solexstudios.zendesk.com';
-const tickets = '/api/v2/tickets.json';
 const username = "team@solexstudios.com";
 const password = "solexstudios";
 
@@ -24,7 +23,8 @@ const server = app.listen(8081, () => {
 
     const auth = 'Basic ' + base64.encode(username + ":" + password);
 
-    app.get('/tickets', (req, res) => {
+    app.get('/tickets/:page', (req, res) => {
+        const tickets = `/api/v2/tickets.json?page=${req.params.page}&per_page=25`;
         const start = new Date().getTime();
         console.log("Handling request...")
         fetch(url + tickets , {

@@ -6,12 +6,8 @@ import { itemsPerPage } from './Pagination';
 class Table extends React.Component {
 
     generateList = (tickets) => {
-        const showTickets = tickets.slice(
-            this.props.currentPage * itemsPerPage,
-            (this.props.currentPage + 1) * itemsPerPage
-        );
         return(
-            showTickets.map((item, index) => 
+            tickets.map((item, index) => 
                 <Listing
                     item={item}
                     id={item.id}
