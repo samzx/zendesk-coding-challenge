@@ -8,6 +8,8 @@ import { url, comments } from '../app';
 class Desk extends React.Component {
     state = {
         comments: null,
+        errors: null,
+        loading: false
     }
 
     componentDidMount() {

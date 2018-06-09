@@ -13,8 +13,6 @@ export const url = 'http://localhost:8081';
 export const tickets = '/tickets';
 export const comments = '/comments';
 
-const initialPage = 1;
-
 class App extends React.Component {
     state = {
         showModal: false,
@@ -22,58 +20,25 @@ class App extends React.Component {
         loading: false,
         errors: null,
         currentTicket: null,
-        currentPage: 0,
     }
 
     setTicket = (id) => {
         this.setState({currentTicket: id, showModal: true});
     }
 
-    fetchListings = (page) => {
-        if(this.state.loading || this.state.currentPage === page) return;
-        this.setState({ currentPage: page, loading: true });
-        fetch(url + tickets + `/${page}`, {
-            method: 'GET',
-        })
-        .then((res) => {
-            if(res.ok) {
-                console.log(res);
-                return res.json();
-            } else {
-                throw res;
-            }
-        })
-        .then((json) => {
-            this.setState({ data: json, loading: false });
-        })
-        .catch((e) => {
-            this.setState({ errors: `${e.status} ${e.statusText}`, loading: false });
-            console.log(e);
-        });
-    }
-
-    componentDidMount() {
-        this.fetchListings(initialPage);
+    setData = (data) => {
+        this.setState({data});
     }
 
     render() {
-        const {data, errors, loading} = this.state;
+        const {data} = this.state;
         return (
             <div className="app">
-                <Header loading={loading} errors={errors} />
-                {
-                    errors && <p className="loading" >{errors}</p>
-                }
-                { 
-                    loading &&
-                    <div className="loading" >
-                        <p>{"Loading..."}</p> 
-                    </div>
-                }
+                <Header />
                 <div className="dashboard">
                     <Drawer
                         data={data}
-                        currentPage={this.state.currentPage}
+                        setData={this.setData}
                         currentTicket={this.state.currentTicket}
                         setTicket={this.setTicket}
                         fetchListings={this.fetchListings}
