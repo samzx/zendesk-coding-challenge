@@ -11,26 +11,22 @@ import Desk from './components/Desk';
 
 export const url = 'http://localhost:8081';
 export const tickets = '/tickets';
-export const comments = '/comments'
+export const comments = '/comments';
+
+const initialPage = 1;
 
 class App extends React.Component {
     state = {
+        showModal: false,
         data: null,
         loading: false,
         errors: null,
         currentTicket: null,
         currentPage: 0,
-        comments: null,
-        showModal: false,
-        loadingComments: false,
     }
 
     setTicket = (id) => {
         this.setState({currentTicket: id, showModal: true});
-    }
-
-    setComments = (comments) => {
-        this.setState({comments});
     }
 
     fetchListings = (page) => {
@@ -57,7 +53,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        this.fetchListings(1);
+        this.fetchListings(initialPage);
     }
 
     render() {
@@ -80,21 +76,18 @@ class App extends React.Component {
                         currentPage={this.state.currentPage}
                         currentTicket={this.state.currentTicket}
                         setTicket={this.setTicket}
-                        setComments={this.setComments}
                         fetchListings={this.fetchListings}
                     />
                     <Modal
-                    isOpen={this.state.showModal}
-                    shouldCloseOnOverlayClick={true}
-                    onRequestClose={() => {
-                        this.setState({showModal: false});
-                        this.setComments(null);
-                    }}
-                    ariaHideApp={false}
+                        isOpen={this.state.showModal}
+                        shouldCloseOnOverlayClick={true}
+                        onRequestClose={() => {
+                            this.setState({showModal: false});
+                        }}
+                        ariaHideApp={false}
                     >
                         <Desk
                             currentTicket={this.state.currentTicket}
-                            comments={this.state.comments}
                             data={data}
                         />
                     </Modal>

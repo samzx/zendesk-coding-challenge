@@ -15,7 +15,6 @@ class Table extends React.Component {
                     key={`listing-${index}`}
                     currentTicket={this.props.currentTicket}
                     setTicket={this.props.setTicket}
-                    setComments={this.props.setComments}
                 />
             )
         );
