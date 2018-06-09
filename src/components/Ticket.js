@@ -14,6 +14,7 @@ class Ticket extends React.Component {
 
     componentDidMount() {
         this._mounted = true;
+        this.setState({ loading: true })
         fetch(url + comments + `/${this.props.currentTicket}`, {
             method: 'GET',
         })
@@ -26,7 +27,7 @@ class Ticket extends React.Component {
         })
         .then((json) => {
             if(!this._mounted) return;
-            this.setState({ comments: json.comments });
+            this.setState({ comments: json.comments, loading: false });
         })
         .catch((e) => {
             if(!this._mounted) return;
@@ -46,7 +47,11 @@ class Ticket extends React.Component {
                     currentTicket={this.props.currentTicket}
                     data={this.props.data}
                 />
-                <Conversation comments={this.state.comments} />
+                {
+                    this.state.loading ?
+                    <p>Loading...</p> :
+                    <Conversation comments={this.state.comments} />
+                }
             </div>
         );
     }
