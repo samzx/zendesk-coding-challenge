@@ -52,7 +52,6 @@ const server = app.listen(8081, () => {
         })
     });
 
-    // TODO: Get comments for a ticket.
     app.get('/comments/:id', (req, res) => {
         const comments = `/api/v2/tickets/${req.params.id}/comments.json`;
         const start = new Date().getTime();
