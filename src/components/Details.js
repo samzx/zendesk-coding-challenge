@@ -17,6 +17,7 @@ class Details extends React.Component {
                 <p>status: {ticketDetails.status}</p>
                 <p>subject: {ticketDetails.subject}</p>
                 <p>description: {ticketDetails.description}</p>
+                Tag: {ticketDetails.tags.map((tag, index) => <p key={`tag-${index}`}>{tag}</p>)}
             </div>
         );
     }

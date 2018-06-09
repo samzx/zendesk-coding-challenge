@@ -5,6 +5,7 @@ import { url, comments } from '../app';
 class Listing extends React.Component {
 
     handleClick = () => {
+        if(this.props.currentTicket === this.props.id) return;
         this.props.setTicket(this.props.id);
         fetch(url + comments + `/${this.props.id}`, {
             method: 'GET',

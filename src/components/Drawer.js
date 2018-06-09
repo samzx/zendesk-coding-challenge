@@ -11,13 +11,13 @@ class Drawer extends React.Component {
                 <Table
                     data={this.props.data}
                     currentPage={this.props.currentPage}
+                    currentTicket={this.props.currentTicket}
                     setTicket={this.props.setTicket}
                     setComments={this.props.setComments}
                 />
                 <Pagination
                     data={this.props.data}
                     currentPage={this.props.currentPage}
-                    setPage={this.props.setPage}
                     fetchListings={this.props.fetchListings}
                 />
             </div>

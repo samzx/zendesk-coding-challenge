@@ -15,7 +15,6 @@ class Pagination extends React.Component {
                 <div
                     key={`page-${page}`}
                     onClick={() => {
-                        this.props.setPage(page);
                         this.props.fetchListings(page);
                     }}
                 >

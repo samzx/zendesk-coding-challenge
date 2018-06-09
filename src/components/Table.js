@@ -13,6 +13,7 @@ class Table extends React.Component {
                     id={item.id}
                     index={index}
                     key={`listing-${index}`}
+                    currentTicket={this.props.currentTicket}
                     setTicket={this.props.setTicket}
                     setComments={this.props.setComments}
                 />

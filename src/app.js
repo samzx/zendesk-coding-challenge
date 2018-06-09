@@ -15,10 +15,10 @@ export const comments = '/comments'
 class App extends React.Component {
     state = {
         data: null,
-        loading: true,
+        loading: false,
         errors: null,
         currentTicket: null,
-        currentPage: 1,
+        currentPage: 0,
         comments: null,
         loadingComments: false,
     }
@@ -31,11 +31,9 @@ class App extends React.Component {
         this.setState({comments});
     }
 
-    setPage = (currentPage) => {
-        this.setState({currentPage});
-    }
-
     fetchListings = (page) => {
+        if(this.state.loading || this.state.currentPage === page) return;
+        this.setState({ currentPage: page, loading: true });
         fetch(url + tickets + `/${this.state.currentPage}`, {
             method: 'GET',
         })
@@ -78,9 +76,9 @@ class App extends React.Component {
                     <Drawer
                         data={data}
                         currentPage={this.state.currentPage}
+                        currentTicket={this.state.currentTicket}
                         setTicket={this.setTicket}
                         setComments={this.setComments}
-                        setPage={this.setPage}
                         fetchListings={this.fetchListings}
                     />
                     <Desk
