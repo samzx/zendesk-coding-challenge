@@ -3,7 +3,7 @@ import React from 'react';
 import Listing from './Listing';
 import { itemsPerPage } from './Pagination';
 
-class Table extends React.Component {
+class List extends React.Component {
 
     generateList = (tickets) => {
         return(
@@ -22,7 +22,7 @@ class Table extends React.Component {
 
     render(){
         return(
-            <div className="ticket-list" >
+            <div className="list" >
                 {
                     this.props.data &&
                     this.generateList(this.props.data.tickets)
@@ -32,4 +32,4 @@ class Table extends React.Component {
     }
 }
 
-export default Table;
+export default List;

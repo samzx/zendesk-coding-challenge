@@ -7,7 +7,7 @@ import './styles/styles.scss';
 
 import Header from './components/Header';
 import Drawer from './components/Drawer';
-import Desk from './components/Desk';
+import Ticket from './components/Ticket';
 
 export const url = 'http://localhost:8081';
 export const tickets = '/tickets';
@@ -51,7 +51,7 @@ class App extends React.Component {
                         }}
                         ariaHideApp={false}
                     >
-                        <Desk
+                        <Ticket
                             currentTicket={this.state.currentTicket}
                             data={data}
                         />

@@ -1,14 +1,14 @@
 import React from 'react';
 
-class History extends React.Component {
+class Conversation extends React.Component {
 
     render() {
         return(
-            <div className="history">
+            <div className="conversation">
             {
                 this.props.comments &&
                 this.props.comments.map((item, index) => 
-                    <div key={`history-${index}`}>{item.author_id} {item.body}</div>
+                    <div key={`conversation-${index}`}>{item.author_id} {item.body}</div>
                 )
             }
             </div>
@@ -16,4 +16,4 @@ class History extends React.Component {
     }
 }
 
-export default History;
+export default Conversation;

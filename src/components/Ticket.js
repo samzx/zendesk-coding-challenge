@@ -1,11 +1,11 @@
 import React from 'react';
 
 import Details from './Details';
-import History from './History';
+import Conversation from './Conversation';
 
-import { url, comments } from '../app';
+import { url, comments, tickets } from '../app';
 
-class Desk extends React.Component {
+class Ticket extends React.Component {
     state = {
         comments: null,
         errors: null,
@@ -41,15 +41,15 @@ class Desk extends React.Component {
 
     render() {
         return(
-            <div className="desk">
+            <div className="ticket">
                 <Details
                     currentTicket={this.props.currentTicket}
                     data={this.props.data}
                 />
-                <History comments={this.state.comments} />
+                <Conversation comments={this.state.comments} />
             </div>
         );
     }
 }
 
-export default Desk;
+export default Ticket;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Pagination from './Pagination';
-import Table from './Table';
+import List from './List';
 
 import { url, tickets } from '../app';
 
@@ -55,7 +55,7 @@ class Drawer extends React.Component {
             {
                 errors && <p className="loading" >{errors}</p>
             }
-                <Table
+                <List
                     data={this.props.data}
                     currentPage={this.state.currentPage}
                     currentTicket={this.props.currentTicket}
