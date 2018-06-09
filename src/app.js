@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Modal from 'react-modal';
 
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
@@ -20,11 +21,12 @@ class App extends React.Component {
         currentTicket: null,
         currentPage: 0,
         comments: null,
+        showModal: false,
         loadingComments: false,
     }
 
     setTicket = (id) => {
-        this.setState({currentTicket: id});
+        this.setState({currentTicket: id, showModal: true});
     }
 
     setComments = (comments) => {
@@ -34,18 +36,18 @@ class App extends React.Component {
     fetchListings = (page) => {
         if(this.state.loading || this.state.currentPage === page) return;
         this.setState({ currentPage: page, loading: true });
-        fetch(url + tickets + `/${this.state.currentPage}`, {
+        fetch(url + tickets + `/${page}`, {
             method: 'GET',
         })
         .then((res) => {
             if(res.ok) {
+                console.log(res);
                 return res.json();
             } else {
                 throw res;
             }
         })
         .then((json) => {
-            console.log(json);
             this.setState({ data: json, loading: false });
         })
         .catch((e) => {
@@ -81,11 +83,21 @@ class App extends React.Component {
                         setComments={this.setComments}
                         fetchListings={this.fetchListings}
                     />
-                    <Desk
-                        currentTicket={this.state.currentTicket}
-                        comments={this.state.comments}
-                        data={data}
-                    />
+                    <Modal
+                    isOpen={this.state.showModal}
+                    shouldCloseOnOverlayClick={true}
+                    onRequestClose={() => {
+                        this.setState({showModal: false});
+                        this.setComments(null);
+                    }}
+                    ariaHideApp={false}
+                    >
+                        <Desk
+                            currentTicket={this.state.currentTicket}
+                            comments={this.state.comments}
+                            data={data}
+                        />
+                    </Modal>
                 </div>
             </div>
         );

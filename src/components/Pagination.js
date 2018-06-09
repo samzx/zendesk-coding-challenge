@@ -30,7 +30,7 @@ class Pagination extends React.Component {
     
     render() {
         return(
-            <div className="pagination" style={{display: 'flex'}}>
+            <div className="pagination" style={{display: 'flex', margin: 'auto'}}>
                 {
                     this.props.data &&
                     this.createPagination(this.props.data.count)
