@@ -1,39 +1,39 @@
-@import './base/settings';
-@import './base/base';
+@import "./base/settings";
+@import "./base/base";
 
-@import './components/_app.scss';
-@import './components/_dashboard.scss';
-@import './components/_details.scss';
-@import './components/_drawer.scss';
-@import './components/_header.scss';
-@import './components/_list.scss';
-@import './components/_listing.scss';
-@import './components/_pagination.scss';
-@import './components/_ticket.scss';
+@import "./components/_app.scss";
+@import "./components/_dashboard.scss";
+@import "./components/_details.scss";
+@import "./components/_drawer.scss";
+@import "./components/_header.scss";
+@import "./components/_list.scss";
+@import "./components/_listing.scss";
+@import "./components/_pagination.scss";
+@import "./components/_ticket.scss";
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Raleway:100');
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Raleway:100");
 
 .message {
-    background: rgba(255, 255, 255, 0.9);
-    z-index: 100;
-    font-size: 5rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding-top: 30vh;
-    text-align: center;
-    width: 100vw;
-    height: 70vh;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 100;
+  font-size: 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 30vh;
+  text-align: center;
+  width: 100vw;
+  height: 70vh;
 }
 
 .banner {
-    background: linear-gradient(to right, cyan , purple);
-    padding: 0.25rem;
+  background: linear-gradient(to right, cyan, purple);
+  padding: 0.25rem;
 }
 
 @media only screen and (max-width: 720px) {
-    .message {
-        font-size: 2.5rem;
-    }
+  .message {
+    font-size: 2.5rem;
+  }
 }

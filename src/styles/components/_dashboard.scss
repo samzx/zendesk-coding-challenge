@@ -1,19 +1,19 @@
 .dashboard {
-    display: flex;
-    height: calc(100vh - #{$header-height});
+  display: flex;
+  height: calc(100vh - #{$header-height});
 }
 
 .ReactModal__Overlay {
-    background-color: rgba(0, 0, 0, 0.25) !important;
+  background-color: rgba(0, 0, 0, 0.25) !important;
 }
 
 .modal-header {
-    background: white;
-    border-bottom: 1px solid #eee;
-    top: 0px;
-    padding: 1rem;
+  background: white;
+  border-bottom: 1px solid #eee;
+  top: 0px;
+  padding: 1rem;
 }
 
 .modal-close {
-    cursor: pointer;
+  cursor: pointer;
 }

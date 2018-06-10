@@ -1,56 +1,56 @@
 .listing {
-    border-bottom: 1px solid #eee;
-    cursor: pointer;
-    padding: 1rem 2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    transition: box-shadow 0.3s, color 0.3s;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: box-shadow 0.3s, color 0.3s;
 }
 
 .listing:hover {
-    box-shadow: 0px 0px 10px 0px #ddd;
-    color: purple;
-    z-index: 100;
+  box-shadow: 0px 0px 10px 0px #ddd;
+  color: purple;
+  z-index: 100;
 }
 
 .listing > * > *::first-letter {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .listing--left {
-    flex: 7
+  flex: 7;
 }
 
 .listing--right {
-    text-align: right;
-    margin-left: 2rem;
-    flex: 1
+  text-align: right;
+  margin-left: 2rem;
+  flex: 1;
 }
 
 .listing:last-child {
-    border-bottom: 0px;
+  border-bottom: 0px;
 }
 
-.listing-subject > h3{
-    width: calc(72rem - 20rem);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
+.listing-subject > h3 {
+  width: calc(72rem - 20rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
 }
 
 .listing-time {
-    position: relative;
+  position: relative;
 }
 
-.listing > * > p{
-    margin: 0;
-    display: inline-block;
+.listing > * > p {
+  margin: 0;
+  display: inline-block;
 }
 
 @media only screen and (max-width: 720px) {
-    .listing-subject > h3{
-        width: calc(100vw - 15rem);
-    }
+  .listing-subject > h3 {
+    width: calc(100vw - 15rem);
+  }
 }

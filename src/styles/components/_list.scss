@@ -1,19 +1,21 @@
 .list {
-    overflow-y: scroll;
+  overflow-y: scroll;
 }
 
 // Mobile
 @media only screen and (max-width: 720px) {
-    .list {
-        height: calc(100vh - #{$pagination-height} - #{$header-height} - 2.3rem);
-    }
+  .list {
+    height: calc(100vh - #{$pagination-height} - #{$header-height} - 2.3rem);
+  }
 }
 
 // Desktop
 @media only screen and (min-width: 720px) {
-    .list {
-        height: calc(100vh - #{$pagination-height} - #{$header-height} - 6rem - 8rem);
-        border-radius: 4px;
-        margin-bottom: 0;
-    }
+  .list {
+    height: calc(
+      100vh - #{$pagination-height} - #{$header-height} - 6rem - 8rem
+    );
+    border-radius: 4px;
+    margin-bottom: 0;
+  }
 }

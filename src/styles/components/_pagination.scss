@@ -1,27 +1,26 @@
 .pagination {
-    border-top: 1px solid #eee;
-    padding: 1rem;
-    height: $pagination-height;
-    text-align: center;
+  border-top: 1px solid #eee;
+  padding: 1rem;
+  height: $pagination-height;
+  text-align: center;
 }
 
 .pagination--button {
-    cursor: pointer;
-    display: inline-block;
-    margin: 1rem;
+  cursor: pointer;
+  display: inline-block;
+  margin: 1rem;
 }
 
 .pagination--button__selected {
-    font-weight: bold;
-    color: purple;
+  font-weight: bold;
+  color: purple;
 }
 
 .pagination--button__unselected {
-    color: gray;
+  color: gray;
 }
 
 @media only screen and (min-width: 720px) {
-    .pagination {
-
-    }
+  .pagination {
+  }
 }
