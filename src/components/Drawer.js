@@ -47,12 +47,16 @@ class Drawer extends React.Component {
             <div className="drawer">
             { 
                 loading &&
-                <div className="loading" >
+                <div className="message" >
                     <p>{"Loading..."}</p> 
                 </div>
             }
             {
-                errors && <p className="loading" >{errors}</p>
+                errors && 
+                <div className="message" >
+                    <p>Something went wrong 😭</p>
+                    <p>{errors}</p>
+                </div>
             }
                 <div className="banner" />
                 <List

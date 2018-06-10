@@ -14,15 +14,16 @@ class Details extends React.Component {
         return (
             ticketDetails &&
             <div>
-                <p>Ticket ID: {ticketDetails.id}</p>
-                <p>Requester ID: {ticketDetails.requester_id}</p>
-                <p>Subject: {ticketDetails.subject}</p>
-                <p>Priority: {ticketDetails.priority}</p>
-                <p>Type: {ticketDetails.type}</p>
-                <p>Status: {ticketDetails.status}</p>
-                <p>Creation time: {toReadableTime(ticketDetails.created_at)}</p>
-                <p>Tags: {ticketDetails.tags.map((tag, index) => <span className='ticket--tag' key={`tag-${index}`}>{tag}</span>)}</p>
-                <p>Description: </p>
+                <p><b>Ticket ID: </b>{ticketDetails.id}</p>
+                <p><b>Requester ID: </b>{ticketDetails.requester_id}</p>
+                <p><b>Priority: </b>{ticketDetails.priority}</p>
+                <p><b>Type: </b>{ticketDetails.type}</p>
+                <p><b>Status: </b>{ticketDetails.status}</p>
+                <p><b>Creation time: </b>{toReadableTime(ticketDetails.created_at)}</p>
+                <p><b>Tags: </b>{ticketDetails.tags.map((tag, index) => <span className='ticket--tag' key={`tag-${index}`}>{tag}</span>)}</p>
+                <p><b>Subject: </b></p>
+                <p>{ticketDetails.subject}</p>
+                <p><b>Description: </b></p>
                 <p> {ticketDetails.description}</p>
             </div>
         );
