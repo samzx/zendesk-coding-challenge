@@ -14,17 +14,46 @@ class Details extends React.Component {
         return (
             ticketDetails &&
             <div>
-                <p><b>Ticket ID: </b>{ticketDetails.id}</p>
-                <p><b>Requester ID: </b>{ticketDetails.requester_id}</p>
-                <p><b>Priority: </b>{ticketDetails.priority}</p>
-                <p><b>Type: </b>{ticketDetails.type}</p>
-                <p><b>Status: </b>{ticketDetails.status}</p>
-                <p><b>Creation time: </b>{toReadableTime(ticketDetails.created_at)}</p>
-                <p><b>Tags: </b>{ticketDetails.tags.map((tag, index) => <span className='ticket--tag' key={`tag-${index}`}>{tag}</span>)}</p>
-                <p><b>Subject: </b></p>
-                <p>{ticketDetails.subject}</p>
-                <p><b>Description: </b></p>
-                <p> {ticketDetails.description}</p>
+                <p style={{textAlign: 'center'}}><i>Created {toReadableTime(ticketDetails.created_at)}</i></p>
+                <table className="details--table">
+                    <tbody>
+                        <tr>
+                            <td><h4>Ticket ID</h4></td>
+                            <td><h4>Requester ID</h4></td>
+                            <td><h4>Submitter ID</h4></td>
+                        </tr>
+                            <tr>
+                            <td>{ticketDetails.id}</td>
+                            <td>{ticketDetails.requester_id}</td>
+                            <td>{ticketDetails.submitter_id}</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td><h4>Status</h4></td>
+                            <td><h4>Type</h4></td>
+                            <td><h4>Priority</h4></td>
+                        </tr>
+                        <tr>
+                            <td>{ticketDetails.status}</td>
+                            <td>{ticketDetails.type}</td>
+                            <td>{ticketDetails.priority}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr className="details--split" />
+                <div>
+                    <h3>Tags</h3>
+                    <p>
+                        {ticketDetails.tags.map((tag, index) => 
+                            <span className='ticket--tag' key={`tag-${index}`}>{tag}</span>
+                        )}
+                    </p>
+                    <h3>Subject</h3>
+                    <p>{ticketDetails.subject}</p>
+                    <h3>Description</h3>
+                    <p> {ticketDetails.description}</p>
+                </div>
             </div>
         );
     }

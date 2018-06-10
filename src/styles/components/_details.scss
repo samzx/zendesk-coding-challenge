@@ -4,6 +4,29 @@
     padding: 2rem;
 }
 
+.details--split {
+    border: 0;
+    border-bottom: 1px solid #eee;
+    margin: 4rem 0;
+}
+
+.details--table > tbody > tr > td {
+    width: 33%;
+}
+
+.details--table > tbody > tr > td::first-letter{
+    text-transform: capitalize;
+}
+
+.details--table{
+    width: 100%;
+    text-align: center;
+}
+
+.details--table > tbody > tr > td > h4 {
+    margin-bottom: 1rem;
+}
+
 @media only screen and (max-width: 720px) {
     .details {
         border-top: 1px solid #eee;
