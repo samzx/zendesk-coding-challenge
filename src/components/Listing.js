@@ -13,6 +13,16 @@ class Listing extends React.Component {
     return timeString.substring(0, timeZoneIndex);
   };
 
+  visualPriority = string => {
+    const map = {
+      "urgent": "★★★★",
+      "high": "★★★",
+      "normal": "★★",
+      "low": "★"
+    };
+    return map[string];
+  };
+
   render() {
     const { item, index } = this.props;
     return (
@@ -30,7 +40,7 @@ class Listing extends React.Component {
             <h3>{item.type}</h3>
           </div>
           <div className="listing-priority">
-            <p>{item.priority}</p>
+            <p>{this.visualPriority(item.priority)}</p>
           </div>
         </div>
       </div>

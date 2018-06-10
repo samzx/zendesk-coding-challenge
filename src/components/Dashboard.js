@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Modal from "react-modal";
 
 import Header from "./Header";
@@ -62,7 +61,7 @@ class Dashboard extends React.Component {
               className="modal-close"
               onClick={() => this.setState({ showModal: false })}
             >
-              {"🔙"}
+              {"← Back"}
             </span>
           </div>
           <div className="banner" />
