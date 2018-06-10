@@ -22,7 +22,6 @@ const server = app.listen(8081, () => {
     console.log("Server app listening on port", port)
 
     // Handle page of tickets request
-    // additional params: sort_by=created_at&sort_order=desc
     app.get('/tickets/:page', (req, res) => {
         const tickets = `/api/v2/tickets.json?sort_by=created_at&sort_order=desc&page=${req.params.page}&per_page=25`;
         fetch(url + tickets , {
@@ -44,32 +43,6 @@ const server = app.listen(8081, () => {
         .catch((e) => {
             console.log(`Failed to get tickets for page ${req.params.page}.`);
             res.status(e.status);
-            res.send(e);
-        })
-    });
-
-    // Handle comments for specific id request
-    app.get('/comments/:id', (req, res) => {
-        const comments = `/api/v2/tickets/${req.params.id}/comments.json`;
-        fetch(url + comments, {
-            method: 'GET',
-            headers: {
-                "Authorization": auth
-            }
-        })
-        .then((response) => {
-            if(response.ok){
-                return response.json();
-            } else {
-                throw response;
-            }
-        })
-        .then((json) => {
-            res.send(json);
-        })
-        .catch((e) => {
-            console.log(`Failed to get comments for id ${req.params.id}.`);
-            res.status(401);
             res.send(e);
         })
     });
