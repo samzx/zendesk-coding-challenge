@@ -9,7 +9,10 @@
     "start": "webpack-dev-server --open",
     "server": "cd server && npm run start",
     "test": "jest",
-    "prettier": "prettier --write **/*.js  && prettier --write **/*.scss && prettier --write src/**/_*.scss && prettier --write ./*.json && prettier --write src/*.js && prettier --write server/*.js && prettier --write server/*.json"
+    "prettier": "yarn prettier-js && yarn prettier-json && yarn prettier-scss",
+    "prettier-js": "prettier --write */*.js && prettier --write */**/*.js && prettier --write */**/**/*.js",
+    "prettier-json": "prettier --write *.json && prettier --write server/*.json",
+    "prettier-scss": "prettier --write */**/*.scss && prettier --write */**/**/*.scss"
   },
   "dependencies": {
     "babel-cli": "6.24.1",
