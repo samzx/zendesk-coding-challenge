@@ -21,8 +21,8 @@ class Pagination extends React.Component {
                 >
                     {
                         this.props.currentPage == page ?
-                        <b>{page}</b> :
-                        page
+                        <span className="pagination--button__selected">{page}</span> :
+                        <span className="pagination--button__unselected">{page}</span>
                     }
                 </div>
             )

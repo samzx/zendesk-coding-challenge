@@ -28,7 +28,6 @@ class Drawer extends React.Component {
             }
         })
         .then((json) => {
-            console.log(json);
             this.setState({ loading: false });
             this.props.setData(json);
         })

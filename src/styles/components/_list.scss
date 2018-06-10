@@ -2,18 +2,18 @@
     overflow-y: scroll;
 }
 
+// Mobile
 @media only screen and (max-width: 720px) {
     .list {
-        height: calc(100vh - #{$pagination-height} - #{$header-height} - 0.3rem);
+        height: calc(100vh - #{$pagination-height} - #{$header-height} - 2.3rem);
     }
 }
 
+// Desktop
 @media only screen and (min-width: 720px) {
     .list {
         height: calc(100vh - #{$pagination-height} - #{$header-height} - 6rem - 8rem);
-        // border: 1px solid #eee;
         border-radius: 4px;
-        // margin: 0 2rem;
         margin-bottom: 0;
     }
 }
