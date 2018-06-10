@@ -70,7 +70,7 @@ class App extends React.Component {
                                 className="modal-close"
                                 onClick={() => this.setState({showModal: false})}
                             >
-                                {'<'}
+                                {'🔙'}
                             </span>
                         </div>
                         <Ticket

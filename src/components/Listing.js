@@ -3,6 +3,7 @@ import React from 'react';
 class Listing extends React.Component {
 
     handleClick = () => {
+        if(this.props.loading) return;
         this.props.setTicket(this.props.id);
     }
     render() {

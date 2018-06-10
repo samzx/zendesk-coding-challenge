@@ -1,6 +1,17 @@
 .drawer {
-    height: calc(100vh - #{$header-height});
-    margin: 0px auto;
+    background: white;
+    height: min-content;
+    margin: 2rem auto;
+    margin-top: 0;
     max-width: $desktop-container-width;
     width: 100%;
+    border: 1px solid #eee;
+    border-radius: 0 0 0.8rem 0.8rem;
+    // border-radius: 0.8rem;
+}
+
+.drawer--banner {
+    // border-bottom: 1px solid #eee;
+    background: linear-gradient(to right, cyan , purple);
+    padding: 0.25rem;
 }

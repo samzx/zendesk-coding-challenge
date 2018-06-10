@@ -15,6 +15,7 @@ class List extends React.Component {
                     key={`listing-${index}`}
                     currentTicket={this.props.currentTicket}
                     setTicket={this.props.setTicket}
+                    loading={this.props.loading}
                 />
             )
         );

@@ -1,16 +1,22 @@
 .header {
-    border-bottom: 1px solid #ddd;
-    background: #fff;
-    height: $header-height;
+    // border-bottom: 1px solid #ddd;
+    // height: $header-height;
     text-align: center;
 }
 
 .header--title {
     max-width: $desktop-container-width;
     margin: auto;
+    font-family: 'Raleway', sans-serif;
 }
 
 .header--title > * {
     margin: 0;
     padding: 1rem 0;
+}
+
+@media only screen and (min-width: 720px) {
+    .header--title > * {
+        padding: 3rem 0;
+    }
 }

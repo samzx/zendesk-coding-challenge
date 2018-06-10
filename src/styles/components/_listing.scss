@@ -1,8 +1,13 @@
 .listing {
     height: 8rem;
+    // border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     cursor: pointer;
     padding: 1rem;
+}
+
+.listing:last-child {
+    border-bottom: 0px;
 }
 
 .listing-subject {

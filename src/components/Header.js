@@ -5,7 +5,7 @@ class Header extends React.Component {
         return(
             <div className="header" >
                 <div className="header--title" >
-                    <h1>Mobile ticket viewer</h1>
+                    <h1>Zendesk Browser</h1>
                 </div>
             </div>
         );

@@ -1,5 +1,6 @@
 .pagination {
-    border: 1px solid #eee;
+    border-top: 1px solid #eee;
+    // background: #eee;
     height: $pagination-height;
     text-align: center;
 }
@@ -12,6 +13,6 @@
 
 @media only screen and (min-width: 720px) {
     .pagination {
-        margin: 2rem;
+
     }
 }

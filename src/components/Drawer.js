@@ -55,11 +55,14 @@ class Drawer extends React.Component {
             {
                 errors && <p className="loading" >{errors}</p>
             }
+                <div className="drawer--banner">
+                </div>
                 <List
                     data={this.props.data}
                     currentPage={this.state.currentPage}
                     currentTicket={this.props.currentTicket}
                     setTicket={this.props.setTicket}
+                    loading={this.state.loading}
                 />
                 <Pagination
                     data={this.props.data}

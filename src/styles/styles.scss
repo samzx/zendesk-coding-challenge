@@ -12,15 +12,19 @@
 @import './components/_ticket.scss';
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100');
 
 .loading {
     background: rgba(255, 255, 255, 0.9);
     z-index: 100;
     font-size: 5rem;
     position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 30vh;
     text-align: center;
-    width: $desktop-container-width;
-    height: calc(100vh - #{$header-height} - 2rem);
+    width: 100vw;
+    height: 70vh;
 }
 
 .ReactModal__Overlay {
@@ -30,6 +34,7 @@
 
 .modal-header {
     background: white;
+    // background: linear-gradient(to right, cyan , purple);
     border-bottom: 1px solid #eee;
     position: sticky;
     top: 0px;
@@ -41,11 +46,5 @@
 }
 
 @media only screen and (max-width: 720px) {
-    .loading {
-        font-size: 2rem;
-        position: absolute;
-        text-align: center;
-        top: 30%;
-        width: 100vw;
-    }
+
 }
