@@ -1,6 +1,6 @@
 import React from "react";
 
-import { itemsPerPage } from "../app";
+import { itemsPerPage } from "../constants/constants";
 
 class Pagination extends React.Component {
   createPagination = count => {

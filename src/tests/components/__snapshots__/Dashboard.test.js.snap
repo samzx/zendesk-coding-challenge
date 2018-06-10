@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Dashboard correctly 1`] = `
+<div
+  className="dashboard"
+>
+  <Drawer
+    currentTicket={null}
+    data={null}
+    setData={[Function]}
+    setTicket={[Function]}
+  />
+  <Modal
+    ariaHideApp={false}
+    bodyOpenClassName="ReactModal__Body--open"
+    closeTimeoutMS={0}
+    id="the-react-modal"
+    isOpen={false}
+    onRequestClose={[Function]}
+    parentSelector={[Function]}
+    portalClassName="ReactModalPortal"
+    shouldCloseOnEsc={true}
+    shouldCloseOnOverlayClick={true}
+    shouldFocusAfterRender={true}
+    shouldReturnFocusAfterClose={true}
+    style={
+      Object {
+        "content": Object {
+          "bottom": "0",
+          "left": "0",
+          "margin": "0 auto",
+          "maxWidth": "720px",
+          "overflow": "inherit",
+          "padding": "0",
+          "right": "0",
+          "top": "0",
+        },
+      }
+    }
+  >
+    <div
+      className="modal-header"
+    >
+      <span
+        className="modal-close"
+        onClick={[Function]}
+      >
+        ← Back
+      </span>
+    </div>
+    <div
+      className="banner"
+    />
+    <Ticket
+      currentTicket={null}
+      data={null}
+    />
+  </Modal>
+</div>
+`;

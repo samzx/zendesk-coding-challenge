@@ -1,7 +1,7 @@
 import React from "react";
 
 import Listing from "./Listing";
-import { itemsPerPage } from "../app";
+import { itemsPerPage } from "../constants/constants";
 
 class List extends React.Component {
   generateList = tickets => {

@@ -19,7 +19,7 @@ module.exports = {
                 'sass-loader'
             ]
         }]
-    },
+      },
     devtool: 'cheap-module-eval-source-map',
     devServer: {
         contentBase: path.join(__dirname, 'public')

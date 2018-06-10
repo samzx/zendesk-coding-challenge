@@ -3,7 +3,7 @@ import React from "react";
 import Pagination from "./Pagination";
 import List from "./List";
 
-import { url, tickets, itemsPerPage } from "../app";
+import { url, tickets, itemsPerPage } from "../constants/constants";
 
 const initialPage = 1;
 
