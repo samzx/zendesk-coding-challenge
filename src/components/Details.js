@@ -1,5 +1,10 @@
 import React from 'react';
 
+export const toReadableTime = (dateString) => {
+    const date = new Date(dateString);
+    return date.toString();
+}
+
 class Details extends React.Component {
 
     display = (tickets) => {
@@ -9,15 +14,16 @@ class Details extends React.Component {
         return (
             ticketDetails &&
             <div>
-                <p>id: {ticketDetails.id}</p>
-                <p>requester_id: {ticketDetails.requester_id}</p>
-                <p>priority: {ticketDetails.priority}</p>
-                <p>created_at: {ticketDetails.created_at}</p>
-                <p>type: {ticketDetails.type}</p>
-                <p>status: {ticketDetails.status}</p>
-                <p>subject: {ticketDetails.subject}</p>
-                <p>description: {ticketDetails.description}</p>
-                Tag: {ticketDetails.tags.map((tag, index) => <p key={`tag-${index}`}>{tag}</p>)}
+                <p>Ticket ID: {ticketDetails.id}</p>
+                <p>Requester ID: {ticketDetails.requester_id}</p>
+                <p>Subject: {ticketDetails.subject}</p>
+                <p>Priority: {ticketDetails.priority}</p>
+                <p>Type: {ticketDetails.type}</p>
+                <p>Status: {ticketDetails.status}</p>
+                <p>Creation time: {toReadableTime(ticketDetails.created_at)}</p>
+                <p>Tags: {ticketDetails.tags.map((tag, index) => <span className='ticket--tag' key={`tag-${index}`}>{tag}</span>)}</p>
+                <p>Description: </p>
+                <p> {ticketDetails.description}</p>
             </div>
         );
     }

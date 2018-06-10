@@ -17,6 +17,7 @@ const customStyles = {
     content : {
         maxWidth: '720px',
         margin: '0 auto',
+        overflow: 'inherit',
         top: '0',
         left: '0',
         right: '0',
@@ -72,7 +73,8 @@ class App extends React.Component {
                             >
                                 {'🔙'}
                             </span>
-                        </div>
+                            </div>
+                        <div className="banner" />
                         <Ticket
                             currentTicket={this.state.currentTicket}
                             data={data}

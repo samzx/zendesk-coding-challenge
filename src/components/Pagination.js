@@ -5,7 +5,7 @@ export const itemsPerPage = 25;
 class Pagination extends React.Component {
 
     createPagination = (count) => {
-        const numPages = Math.floor(count / itemsPerPage);
+        let numPages = Math.floor(count / itemsPerPage) + (count % itemsPerPage > 0 && 1);
         let arr = []
         for(let i=1; i<=numPages; i++) {
             arr.push(i);

@@ -22,13 +22,13 @@ class Drawer extends React.Component {
         })
         .then((res) => {
             if(res.ok) {
-                console.log(res);
                 return res.json();
             } else {
                 throw res;
             }
         })
         .then((json) => {
+            console.log(json);
             this.setState({ loading: false });
             this.props.setData(json);
         })
@@ -55,8 +55,7 @@ class Drawer extends React.Component {
             {
                 errors && <p className="loading" >{errors}</p>
             }
-                <div className="drawer--banner">
-                </div>
+                <div className="banner" />
                 <List
                     data={this.props.data}
                     currentPage={this.state.currentPage}

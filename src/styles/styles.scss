@@ -36,13 +36,19 @@
     background: white;
     // background: linear-gradient(to right, cyan , purple);
     border-bottom: 1px solid #eee;
-    position: sticky;
+    // position: sticky;
     top: 0px;
     padding: 1rem;
 }
 
 .modal-close {
     cursor: pointer;
+}
+
+.banner {
+    // border-bottom: 1px solid #eee;
+    background: linear-gradient(to right, cyan , purple);
+    padding: 0.25rem;
 }
 
 @media only screen and (max-width: 720px) {
