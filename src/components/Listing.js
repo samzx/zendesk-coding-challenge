@@ -15,10 +15,10 @@ class Listing extends React.Component {
 
   visualPriority = string => {
     const map = {
-      "urgent": "★★★★",
-      "high": "★★★",
-      "normal": "★★",
-      "low": "★"
+      urgent: "★★★★",
+      high: "★★★",
+      normal: "★★",
+      low: "★"
     };
     return map[string];
   };
