@@ -22,8 +22,8 @@ const server = app.listen(8081, () => {
     console.log("Server app listening on port", port)
 
     // Handle page of tickets request
-    app.get('/tickets/:page', (req, res) => {
-        const tickets = `/api/v2/tickets.json?sort_by=created_at&sort_order=desc&page=${req.params.page}&per_page=25`;
+    app.get('/tickets/:per_page/:page', (req, res) => {
+        const tickets = `/api/v2/tickets.json?sort_by=created_at&sort_order=desc&page=${req.params.page}&per_page=${req.params.per_page}`;
         fetch(url + tickets , {
             method: 'GET',
             headers: {

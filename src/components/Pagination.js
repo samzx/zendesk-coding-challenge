@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const itemsPerPage = 25;
+import { itemsPerPage } from '../app';
 
 class Pagination extends React.Component {
 

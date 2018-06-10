@@ -3,7 +3,7 @@ import React from 'react';
 import Pagination from './Pagination';
 import List from './List';
 
-import { url, tickets } from '../app';
+import { url, tickets, itemsPerPage } from '../app';
 
 const initialPage = 1;
 
@@ -17,7 +17,7 @@ class Drawer extends React.Component {
     fetchListings = (page) => {
         if(this.state.loading || this.state.currentPage === page) return;
         this.setState({ currentPage: page, loading: true });
-        fetch(url + tickets + `/${page}`, {
+        fetch(url + tickets + `/${itemsPerPage}` + `/${page}`, {
             method: 'GET',
         })
         .then((res) => {
@@ -32,7 +32,11 @@ class Drawer extends React.Component {
             this.props.setData(json);
         })
         .catch((e) => {
-            this.setState({ errors: `${e.status} ${e.statusText}`, loading: false });
+            if(e.status) {
+                this.setState({ errors: `${e.status} ${e.statusText}`, loading: false });
+            } else {
+                this.setState({errors: e.message, loading: false});
+            }
             console.log(e);
         });
     }

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Listing from './Listing';
-import { itemsPerPage } from './Pagination';
+import { itemsPerPage } from '../app';
 
 class List extends React.Component {
 
