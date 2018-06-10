@@ -1,4 +1,6 @@
 .drawer {
-    height: 100%;
-    width: 100%; //$drawer-width;
+    height: calc(100vh - #{$header-height});
+    margin: 0px auto;
+    max-width: $desktop-container-width;
+    width: 100%;
 }

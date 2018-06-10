@@ -1,16 +1,9 @@
 .app {
     height: 100vh;
+    overflow: hidden;
 }
 
 .dashboard {
     display: flex;
-    height: calc(100vh - 4rem);
-}
-
-.loading {
-    font-size: 5rem;
-    position: absolute;
-    text-align: center;
-    top: 30%;
-    width: 100%;
+    height: calc(100vh - #{$header-height});
 }

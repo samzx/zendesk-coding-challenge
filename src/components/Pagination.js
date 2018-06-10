@@ -14,6 +14,7 @@ class Pagination extends React.Component {
             arr.map((page) => 
                 <div
                     key={`page-${page}`}
+                    className="pagination--button"
                     onClick={() => {
                         this.props.fetchListings(page);
                     }}
@@ -30,7 +31,7 @@ class Pagination extends React.Component {
     
     render() {
         return(
-            <div className="pagination" style={{display: 'flex', margin: 'auto'}}>
+            <div className="pagination">
                 {
                     this.props.data &&
                     this.createPagination(this.props.data.count)

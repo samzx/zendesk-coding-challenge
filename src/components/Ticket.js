@@ -47,11 +47,7 @@ class Ticket extends React.Component {
                     currentTicket={this.props.currentTicket}
                     data={this.props.data}
                 />
-                {
-                    this.state.loading ?
-                    <p>Loading...</p> :
-                    <Conversation comments={this.state.comments} />
-                }
+                <Conversation comments={this.state.comments} loading={this.state.loading} />
             </div>
         );
     }

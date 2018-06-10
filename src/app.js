@@ -13,6 +13,18 @@ export const url = 'http://localhost:8081';
 export const tickets = '/tickets';
 export const comments = '/comments';
 
+const customStyles = {
+    content : {
+        maxWidth: '720px',
+        margin: '0 auto',
+        top: '0',
+        left: '0',
+        right: '0',
+        bottom: '0',
+        padding: '0',
+    }
+  };
+
 class App extends React.Component {
     state = {
         showModal: false,
@@ -44,6 +56,8 @@ class App extends React.Component {
                         fetchListings={this.fetchListings}
                     />
                     <Modal
+                        style={customStyles}
+                        id="the-react-modal"
                         isOpen={this.state.showModal}
                         shouldCloseOnOverlayClick={true}
                         onRequestClose={() => {
@@ -51,6 +65,14 @@ class App extends React.Component {
                         }}
                         ariaHideApp={false}
                     >
+                        <div className="modal-header" >
+                            <span
+                                className="modal-close"
+                                onClick={() => this.setState({showModal: false})}
+                            >
+                                {'<'}
+                            </span>
+                        </div>
                         <Ticket
                             currentTicket={this.state.currentTicket}
                             data={data}

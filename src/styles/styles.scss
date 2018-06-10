@@ -10,3 +10,42 @@
 @import './components/_listing.scss';
 @import './components/_pagination.scss';
 @import './components/_ticket.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.loading {
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 100;
+    font-size: 5rem;
+    position: absolute;
+    text-align: center;
+    width: $desktop-container-width;
+    height: calc(100vh - #{$header-height} - 2rem);
+}
+
+.ReactModal__Overlay {
+    background-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+
+.modal-header {
+    background: white;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0px;
+    padding: 1rem;
+}
+
+.modal-close {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 720px) {
+    .loading {
+        font-size: 2rem;
+        position: absolute;
+        text-align: center;
+        top: 30%;
+        width: 100vw;
+    }
+}

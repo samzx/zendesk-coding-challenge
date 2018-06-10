@@ -1,8 +1,16 @@
 .header {
-    background: grey;
-    height: 4rem;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    height: $header-height;
+    text-align: center;
 }
 
-.header h1 {
+.header--title {
+    max-width: $desktop-container-width;
+    margin: auto;
+}
+
+.header--title > * {
     margin: 0;
+    padding: 1rem 0;
 }

@@ -1,4 +1,18 @@
 .list {
-    height: calc(100% - #{$pagination-height});
     overflow-y: scroll;
+}
+
+@media only screen and (max-width: 720px) {
+    .list {
+        height: calc(100vh - #{$pagination-height} - #{$header-height});
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .list {
+        height: calc(100vh - #{$pagination-height} - #{$header-height} - 6rem);
+        border: 1px solid #eee;
+        border-radius: 4px;
+        margin: 2rem;
+    }
 }

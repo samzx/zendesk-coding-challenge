@@ -1,4 +1,17 @@
 .pagination {
-    background: cornsilk;
+    border: 1px solid #eee;
     height: $pagination-height;
+    text-align: center;
+}
+
+.pagination--button {
+    cursor: pointer;
+    display: inline-block;
+    margin: 1rem;
+}
+
+@media only screen and (min-width: 720px) {
+    .pagination {
+        margin: 2rem;
+    }
 }
