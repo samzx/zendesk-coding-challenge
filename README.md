@@ -51,3 +51,11 @@ Then serve front-end in another terminal:
 ```
 yarn run start
 ```
+
+## Tests
+
+From the root directory: `zendesk-coding-challenge`
+
+```
+yarn run test
+```
