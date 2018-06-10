@@ -5,6 +5,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.listing > * > *::first-letter {
     text-transform: capitalize;
 }
 
