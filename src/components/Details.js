@@ -43,14 +43,14 @@ class Details extends React.Component {
                 </table>
                 <hr className="details--split" />
                 <div>
+                    <h3>Subject</h3>
+                    <p>{ticketDetails.subject}</p>
                     <h3>Tags</h3>
                     <p>
                         {ticketDetails.tags.map((tag, index) => 
                             <span className='ticket--tag' key={`tag-${index}`}>{tag}</span>
                         )}
                     </p>
-                    <h3>Subject</h3>
-                    <p>{ticketDetails.subject}</p>
                     <h3>Description</h3>
                     <p> {ticketDetails.description}</p>
                 </div>
