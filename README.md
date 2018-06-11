@@ -23,24 +23,12 @@ Move into directory
 cd zendesk-coding-challenge
 ```
 
-Install dependancies for front-end
+Install dependancies
 ```
-yarn install
-```
-
-Move into back-end
-```
-cd server
-```
-
-Install dependancies for back-end
-```
-yarn install
+yarn run gather
 ```
 
 ## Development build
-
-From the root directory: `zendesk-coding-challenge`
 
 First, serve up back-end
 
@@ -54,8 +42,6 @@ yarn run start
 ```
 
 ## Tests
-
-From the root directory: `zendesk-coding-challenge`
 
 ```
 yarn run test
