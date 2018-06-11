@@ -10,7 +10,8 @@ const initialPage = 1;
 class Drawer extends React.Component {
   state = {
     currentPage: 0,
-    loading: false
+    loading: false,
+    errors: null
   };
 
   fetchListings = page => {

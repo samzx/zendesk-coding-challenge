@@ -22,8 +22,6 @@ class Dashboard extends React.Component {
   state = {
     showModal: false,
     data: null,
-    loading: false,
-    errors: null,
     currentTicket: null
   };
 
