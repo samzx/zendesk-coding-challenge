@@ -8,7 +8,7 @@ exports[`should render Ticket correctly 1`] = `
     className="ticket--heading"
   >
     <h2>
-      Ticket Details
+      Details
     </h2>
   </div>
   <Details />

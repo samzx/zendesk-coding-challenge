@@ -23,6 +23,8 @@ class Listing extends React.Component {
     return map[string];
   };
 
+  // Visual Status: Open, Pending, Closed - colors
+
   render() {
     const { item, index } = this.props;
     return (
