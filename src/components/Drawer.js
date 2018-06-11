@@ -30,6 +30,7 @@ class Drawer extends React.Component {
       .then(json => {
         this.setState({ loading: false });
         this.props.setData(json);
+        this._list.scrollToTop();
       })
       .catch(e => {
         if (e.status) {
@@ -70,6 +71,7 @@ class Drawer extends React.Component {
           currentTicket={this.props.currentTicket}
           setTicket={this.props.setTicket}
           loading={this.state.loading}
+          ref={ref => (this._list = ref)}
         />
         <Pagination
           data={this.props.data}
