@@ -13,6 +13,7 @@ class Details extends React.Component {
     return (
       ticketDetails && (
         <div>
+          <h3 style={{ textAlign: "center" }}>Ticket {ticketDetails.id}</h3>
           <p style={{ textAlign: "center" }}>
             <i>Created {toReadableTime(ticketDetails.created_at)}</i>
           </p>
@@ -20,19 +21,19 @@ class Details extends React.Component {
             <tbody>
               <tr>
                 <td>
-                  <h4>Ticket ID</h4>
+                  <h4>Submitter ID</h4>
                 </td>
                 <td>
                   <h4>Requester ID</h4>
                 </td>
                 <td>
-                  <h4>Submitter ID</h4>
+                  <h4>Asignee ID</h4>
                 </td>
               </tr>
               <tr>
-                <td>{ticketDetails.id}</td>
-                <td>{ticketDetails.requester_id}</td>
                 <td>{ticketDetails.submitter_id}</td>
+                <td>{ticketDetails.requester_id}</td>
+                <td>{ticketDetails.assignee_id}</td>
               </tr>
             </tbody>
             <tbody>
