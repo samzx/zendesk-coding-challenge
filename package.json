@@ -7,7 +7,7 @@
   "scripts": {
     "build": "webpack",
     "gather": "yarn install && cd server && yarn install",
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server --open --port 5555",
     "server": "cd server && npm run start",
     "test": "jest --config=jest.config.json",
     "prettier": "yarn prettier-js && yarn prettier-json && yarn prettier-scss",

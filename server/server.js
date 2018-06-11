@@ -9,10 +9,10 @@ const username = "team@solexstudios.com";
 const password = "solexstudios";
 const auth = "Basic " + base64.encode(username + ":" + password);
 
-const server = app.listen(8081, () => {
+const server = app.listen(5556, () => {
   // Enable CORS for client only
   app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "http://localhost:8080");
+    res.header("Access-Control-Allow-Origin", "http://localhost:5555");
     res.header(
       "Access-Control-Allow-Headers",
       "Origin, X-Requested-With, Content-Type, Accept"
