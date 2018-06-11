@@ -29,4 +29,4 @@ export const threeTickets = {
 
 export const zeroTickets = {
   tickets: []
-}
+};

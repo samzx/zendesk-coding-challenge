@@ -7,4 +7,4 @@ describe("<Ticket />", () => {
     const wrapper = shallow(<Ticket />);
     expect(wrapper).toMatchSnapshot();
   });
-})
+});

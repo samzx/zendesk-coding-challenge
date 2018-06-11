@@ -41,25 +41,26 @@ describe("<Listing />'s time display", () => {
   });
   it("should not show time given a invalid date string", () => {
     const wrapper = shallow(<Listing />);
-    expect(
-      wrapper.instance().shortenTime("abcdefg")
-    ).toEqual("");
+    expect(wrapper.instance().shortenTime("abcdefg")).toEqual("");
   });
 });
 
-
 describe("<Listing />'s handleClick", () => {
-  const mockSetTicket = (props) => {
-    throw 'ticket set';
-  }
+  const mockSetTicket = props => {
+    throw "ticket set";
+  };
   it("should not set ticket if loading", () => {
-    const wrapper = shallow(<Listing setTicket={mockSetTicket} loading={false}/>);
-    expect( () => {
+    const wrapper = shallow(
+      <Listing setTicket={mockSetTicket} loading={false} />
+    );
+    expect(() => {
       wrapper.instance().handleClick();
-    }).toThrow('ticket set');
+    }).toThrow("ticket set");
   });
   it("should set ticket if not loading", () => {
-    const wrapper = shallow(<Listing setTicket={mockSetTicket} loading={true}/>);
+    const wrapper = shallow(
+      <Listing setTicket={mockSetTicket} loading={true} />
+    );
     expect(wrapper.instance().handleClick());
   });
 });
