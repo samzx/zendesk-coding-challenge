@@ -1,7 +1,8 @@
 # zendesk-coding-challenge
 
-Zendesk coding challenge. Dashboard that displays tickets
+A mobile ticket viewer for Zendesk's coding challenge.
 
+![Demo](https://i.imgur.com/QM7OEmM.png)
 ## Prerequisites
 
 * Install node.js from their [website](https://nodejs.org/en/).
