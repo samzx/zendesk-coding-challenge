@@ -13,14 +13,6 @@ $modal-header-height: 1.8rem + 2 * $s-size;
   margin: 2rem;
 }
 
-.ticket--tag::after {
-  content: ", ";
-}
-
-.ticket--tag:last-child::after {
-  content: "";
-}
-
 @media only screen and (max-width: $desktop-container-width) {
   .ticket {
     padding: 2rem 0;

@@ -62,8 +62,9 @@ class Details extends React.Component {
             <h3>Tags</h3>
             <p>
               {ticketDetails.tags.map((tag, index) => (
-                <span className="ticket--tag" key={`tag-${index}`}>
+                <span key={`tag-${index}`}>
                   {tag}
+                  {index + 1 != ticketDetails.tags.length && ", "}
                 </span>
               ))}
             </p>
