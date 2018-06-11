@@ -9,7 +9,7 @@
     "gather": "yarn install && cd server && yarn install",
     "start": "webpack-dev-server --open --port 5555",
     "server": "cd server && npm run start",
-    "test": "jest --config=jest.config.json",
+    "test": "jest --config=jest.config.json --silent",
     "prettier": "yarn prettier-js && yarn prettier-json && yarn prettier-scss",
     "prettier-js": "prettier --write */*.js && prettier --write */**/*.js && prettier --write */**/**/*.js",
     "prettier-json": "prettier --write *.json && prettier --write server/*.json",
