@@ -10,17 +10,17 @@
   margin: 4rem 0;
 }
 
+.details--table {
+  width: 100%;
+  text-align: center;
+}
+
 .details--table > tbody > tr > td {
   width: 33%;
 }
 
 .details--table > tbody > tr > td::first-letter {
   text-transform: capitalize;
-}
-
-.details--table {
-  width: 100%;
-  text-align: center;
 }
 
 .details--table > tbody > tr > td > h4 {

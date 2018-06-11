@@ -1,6 +1,4 @@
 .header {
-  // border-bottom: 1px solid #ddd;
-  // height: $header-height;
   text-align: center;
 }
 
@@ -15,7 +13,7 @@
   padding: 1rem 0;
 }
 
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: $desktop-container-width) {
   .header--title > * {
     padding: 3rem 0;
   }

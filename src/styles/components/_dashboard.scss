@@ -1,6 +1,5 @@
 .dashboard {
   display: flex;
-  height: calc(100vh - #{$header-height});
 }
 
 .ReactModal__Overlay {
@@ -9,9 +8,9 @@
 
 .modal-header {
   background: white;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid $light-border-color;
   top: 0px;
-  padding: 1rem;
+  padding: $s-size;
 }
 
 .modal-close {

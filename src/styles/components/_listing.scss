@@ -49,7 +49,7 @@
   display: inline-block;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: $desktop-container-width) {
   .listing-subject > h3 {
     width: calc(100vw - 15rem);
   }

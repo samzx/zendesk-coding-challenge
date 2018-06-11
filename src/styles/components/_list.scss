@@ -3,17 +3,19 @@
 }
 
 // Mobile
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: $desktop-container-width) {
   .list {
-    height: calc(100vh - #{$pagination-height} - #{$header-height} - 2.3rem);
+    height: calc(
+      100vh - #{$pagination-height-mobile} - #{$header-height-mobile} - #{$banner-height}
+    );
   }
 }
 
 // Desktop
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: $desktop-container-width) {
   .list {
     height: calc(
-      100vh - #{$pagination-height} - #{$header-height} - 6rem - 8rem
+      100vh - #{$pagination-height} - #{$header-height} * 2 - #{$banner-height}
     );
     border-radius: 4px;
     margin-bottom: 0;
