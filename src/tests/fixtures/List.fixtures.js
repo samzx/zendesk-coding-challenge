@@ -1,4 +1,4 @@
-const json = {
+export const threeTickets = {
   tickets: [
     {
       requester_id: 1,
@@ -27,4 +27,6 @@ const json = {
   ]
 };
 
-export default json;
+export const zeroTickets = {
+  tickets: []
+}

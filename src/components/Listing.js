@@ -9,8 +9,14 @@ class Listing extends React.Component {
   };
 
   shortenTime = timeString => {
-    const timeZoneIndex = timeString.indexOf("GMT");
-    return timeString.substring(0, timeZoneIndex);
+    try {
+      timeString = new Date(timeString).toString();
+      const timeZoneIndex = timeString.indexOf("GMT");
+      return timeString.substring(0, timeZoneIndex).trim();
+    } catch (e) {
+      console.log("Could not parse time.", e);
+      return "";
+    }
   };
 
   visualPriority = string => {
@@ -20,7 +26,7 @@ class Listing extends React.Component {
       normal: "★★",
       low: "★"
     };
-    return map[string];
+    return map[string] ? map[string] : "";
   };
 
   // Visual Status: Open, Pending, Closed - colors
