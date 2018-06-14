@@ -1,6 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Pagination /> should render Pagination correctly 1`] = `
+exports[`<Pagination /> should render Pagination with data 1`] = `
+<div
+  className="pagination"
+>
+  <div
+    className="pagination--button"
+    key="page-1"
+    onClick={[Function]}
+  >
+    <span
+      className="pagination--button__unselected"
+    >
+      1
+    </span>
+  </div>
+  <div
+    className="pagination--button"
+    key="page-2"
+    onClick={[Function]}
+  >
+    <span
+      className="pagination--button__unselected"
+    >
+      2
+    </span>
+  </div>
+  <div
+    className="pagination--button"
+    key="page-3"
+    onClick={[Function]}
+  >
+    <span
+      className="pagination--button__unselected"
+    >
+      3
+    </span>
+  </div>
+  <div
+    className="pagination--button"
+    key="page-4"
+    onClick={[Function]}
+  >
+    <span
+      className="pagination--button__unselected"
+    >
+      4
+    </span>
+  </div>
+  <div
+    className="pagination--button"
+    key="page-5"
+    onClick={[Function]}
+  >
+    <span
+      className="pagination--button__unselected"
+    >
+      5
+    </span>
+  </div>
+</div>
+`;
+
+exports[`<Pagination /> should render Pagination without data 1`] = `
 <div
   className="pagination"
 />

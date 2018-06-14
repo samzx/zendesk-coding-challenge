@@ -2,12 +2,20 @@ import React from "react";
 import { shallow } from "enzyme";
 import Pagination from "../../components/Pagination";
 
+import { response } from "../fixtures/response.fixtures";
+
 describe("<Pagination />", () => {
-  it("should render Pagination correctly", () => {
+  it("should render Pagination without data", () => {
     const wrapper = shallow(<Pagination />);
     expect(wrapper).toMatchSnapshot();
   });
+  it("should render Pagination with data", () => {
+    const wrapper = shallow(<Pagination data={response} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+});
 
+describe("<Pagination /> createPagination method", () => {
   it("should create 0 buttons from 0 items", () => {
     const wrapper = shallow(<Pagination />);
     expect(wrapper.instance().createPagination(0)).toHaveLength(0);
