@@ -1,3 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Listing /> should render Listing correctly 1`] = `""`;
+
+exports[`<Listing /> should render Listing correctly 2`] = `
+<div
+  className="listing"
+  onClick={[Function]}
+>
+  <div
+    className="listing--left"
+  >
+    <div
+      className="listing-subject"
+    >
+      <h3>
+        commodo excepteur cupidatat aliquip quis
+      </h3>
+    </div>
+    <div
+      className="listing-time"
+    >
+      <p>
+        Thu Jun 07 2018 23:13:13
+      </p>
+    </div>
+  </div>
+  <div
+    className="listing--right"
+  >
+    <div
+      className="listing-type"
+    >
+      <h3>
+        question
+      </h3>
+    </div>
+    <div
+      className="listing-priority"
+    >
+      <p>
+        ★★★★
+      </p>
+    </div>
+  </div>
+</div>
+`;

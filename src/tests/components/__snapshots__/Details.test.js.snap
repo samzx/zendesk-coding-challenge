@@ -97,11 +97,15 @@ exports[`<Details/> should render Details correctly with data, with ticket 276 s
             open
           </td>
           <td
-            key="null-1"
-          />
+            key="question-1"
+          >
+            question
+          </td>
           <td
-            key="null-2"
-          />
+            key="urgent-2"
+          >
+            urgent
+          </td>
         </tr>
       </tbody>
     </table>

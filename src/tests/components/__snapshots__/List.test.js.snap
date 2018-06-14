@@ -31,7 +31,7 @@ Id in ipsum aliquip nulla est aliquip labore magna occaecat irure. Tempor amet a
         "id": 276,
         "is_public": true,
         "organization_id": 360068302171,
-        "priority": null,
+        "priority": "urgent",
         "problem_id": null,
         "raw_subject": "commodo excepteur cupidatat aliquip quis",
         "recipient": null,
@@ -46,7 +46,7 @@ Id in ipsum aliquip nulla est aliquip labore magna occaecat irure. Tempor amet a
           "incididunt",
           "occaecat",
         ],
-        "type": null,
+        "type": "question",
         "updated_at": "2018-06-07T13:13:13Z",
         "url": "https://solexstudios.zendesk.com/api/v2/tickets/276.json",
         "via": Object {
