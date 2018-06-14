@@ -6,8 +6,12 @@ import { threeTickets, zeroTickets } from "../fixtures/tickets.fixtures";
 import { response } from "../fixtures/response.fixtures";
 
 describe("<List />", () => {
-  it("should render List correctly", () => {
+  it("should render List without data", () => {
     const wrapper = shallow(<List />);
+    expect(wrapper).toMatchSnapshot();
+  });
+  it("should render List with data", () => {
+    const wrapper = shallow(<List data={response} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
