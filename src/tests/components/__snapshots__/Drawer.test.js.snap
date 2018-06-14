@@ -15,7 +15,6 @@ exports[`<Drawer /> should render Drawer with data 1`] = `
     className="banner"
   />
   <List
-    currentPage={1}
     data={
       Object {
         "count": 102,
@@ -2554,7 +2553,6 @@ exports[`<Drawer /> should render Drawer without data 1`] = `
     className="banner"
   />
   <List
-    currentPage={1}
     loading={true}
   />
   <Pagination

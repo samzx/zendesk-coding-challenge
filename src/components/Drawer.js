@@ -67,7 +67,6 @@ class Drawer extends React.Component {
         <div className="banner" />
         <List
           data={this.props.data}
-          currentPage={this.state.currentPage}
           currentTicket={this.props.currentTicket}
           setTicket={this.props.setTicket}
           loading={this.state.loading}

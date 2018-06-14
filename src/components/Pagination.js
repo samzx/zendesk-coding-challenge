@@ -18,11 +18,17 @@ class Pagination extends React.Component {
           this.props.fetchListings(page);
         }}
       >
-        {this.props.currentPage == page ? (
-          <span className="pagination--button__selected">{page}</span>
-        ) : (
-          <span className="pagination--button__unselected">{page}</span>
-        )}
+        {
+          <span
+            className={
+              this.props.currentPage == page
+                ? "pagination--button__selected"
+                : "pagination--button__unselected"
+            }
+          >
+            {page}
+          </span>
+        }
       </div>
     ));
   };

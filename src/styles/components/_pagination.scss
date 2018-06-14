@@ -11,8 +11,9 @@
 }
 
 .pagination--button__selected {
-  font-weight: bold;
   color: purple;
+  cursor: default;
+  font-weight: bold;
 }
 
 .pagination--button__unselected {
