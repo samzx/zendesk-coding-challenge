@@ -3,7 +3,7 @@ import React from "react";
 import Pagination from "./Pagination";
 import List from "./List";
 
-import { url, tickets, itemsPerPage } from "../constants/constants";
+import { url, tickets, listingsPerPage } from "../constants/constants";
 
 const initialPage = 1;
 
@@ -17,7 +17,7 @@ class Drawer extends React.Component {
   fetchListings = page => {
     if (this.state.loading || this.state.currentPage === page) return;
     this.setState({ currentPage: page, loading: true });
-    fetch(url + tickets + `/${itemsPerPage}` + `/${page}`, {
+    fetch(url + tickets + `/${listingsPerPage}` + `/${page}`, {
       method: "GET"
     })
       .then(res => {
