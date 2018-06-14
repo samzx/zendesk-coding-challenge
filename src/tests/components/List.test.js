@@ -2,7 +2,8 @@ import React from "react";
 import { shallow } from "enzyme";
 import List from "../../components/List";
 
-import { threeTickets, zeroTickets } from "../fixtures/List.fixtures";
+import { threeTickets, zeroTickets } from "../fixtures/tickets.fixtures";
+import { response } from "../fixtures/response.fixtures";
 
 describe("<List />", () => {
   it("should render List correctly", () => {
@@ -16,6 +17,12 @@ describe("<List />'s generateList function", () => {
     const wrapper = shallow(<List />);
     expect(wrapper.instance().generateList(threeTickets.tickets)).toHaveLength(
       3
+    );
+  });
+  it("should generate 25 Listings", () => {
+    const wrapper = shallow(<List />);
+    expect(wrapper.instance().generateList(response.tickets)).toHaveLength(
+      25
     );
   });
   it("should generate 0 Listings", () => {

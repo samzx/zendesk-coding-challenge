@@ -6,70 +6,76 @@ export const toReadableTime = dateString => {
 };
 
 class Details extends React.Component {
-  display = tickets => {
-    const ticketDetails = tickets.find(
-      ticket => ticket.id === this.props.currentTicket
-    );
+  createTitleRow = titleArr => {
     return (
-      ticketDetails && (
+      <tr>
+        {titleArr.map((title, index) => (
+          <td key={`${title}-${index}`}>
+            <h4>{title}</h4>
+          </td>
+        ))}
+      </tr>
+    );
+  };
+
+  createDataRow = dataArr => {
+    return (
+      <tr>
+        {dataArr.map((data, index) => <td key={`${data}-${index}`}>{data}</td>)}
+      </tr>
+    );
+  };
+
+  createTags = tags => {
+    return tags.map((tag, index) => (
+      <span key={`tag-${index}`}>
+        {tag}
+        {index + 1 != tags.length && ", "}
+      </span>
+    ));
+  };
+
+  display = ticket => {
+    const {
+      id,
+      created_at,
+      submitter_id,
+      requester_id,
+      assignee_id,
+      status,
+      type,
+      priority,
+      subject,
+      tags,
+      description
+    } = ticket;
+    return (
+      ticket && (
         <div>
-          <h3 style={{ textAlign: "center" }}>Ticket {ticketDetails.id}</h3>
-          <p style={{ textAlign: "center" }}>
-            <i>Created {toReadableTime(ticketDetails.created_at)}</i>
+          <h3 className="details--id">Ticket {id}</h3>
+          <p className="details--created">
+            Created {toReadableTime(created_at)}
           </p>
           <table className="details--table">
             <tbody>
-              <tr>
-                <td>
-                  <h4>Submitter ID</h4>
-                </td>
-                <td>
-                  <h4>Requester ID</h4>
-                </td>
-                <td>
-                  <h4>Asignee ID</h4>
-                </td>
-              </tr>
-              <tr>
-                <td>{ticketDetails.submitter_id}</td>
-                <td>{ticketDetails.requester_id}</td>
-                <td>{ticketDetails.assignee_id}</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>
-                  <h4>Status</h4>
-                </td>
-                <td>
-                  <h4>Type</h4>
-                </td>
-                <td>
-                  <h4>Priority</h4>
-                </td>
-              </tr>
-              <tr>
-                <td>{ticketDetails.status}</td>
-                <td>{ticketDetails.type}</td>
-                <td>{ticketDetails.priority}</td>
-              </tr>
+              {this.createTitleRow([
+                "Submitter ID",
+                "Requester ID",
+                "Asignee ID"
+              ])}
+              {this.createDataRow([submitter_id, requester_id, assignee_id])}
+              {this.createTitleRow(["Status", "Type", "Priority"])}
+              {this.createDataRow([status, type, priority])}
             </tbody>
           </table>
           <hr className="details--split" />
           <div>
             <h3>Subject</h3>
-            <p>{ticketDetails.subject}</p>
+            <p>{subject}</p>
             <h3>Tags</h3>
-            <p>
-              {ticketDetails.tags.map((tag, index) => (
-                <span key={`tag-${index}`}>
-                  {tag}
-                  {index + 1 != ticketDetails.tags.length && ", "}
-                </span>
-              ))}
-            </p>
+            <p>{this.createTags(tags)}</p>
             <h3>Description</h3>
-            <p> {ticketDetails.description}</p>
+            <p> {description}</p>
           </div>
         </div>
       )
@@ -79,7 +85,13 @@ class Details extends React.Component {
   render() {
     return (
       <div className="details">
-        {this.props.data && this.display(this.props.data.tickets)}
+        {this.props.data &&
+          this.props.currentTicket &&
+          this.display(
+            this.props.data.tickets.find(
+              ticket => ticket.id === this.props.currentTicket
+            )
+          )}
       </div>
     );
   }

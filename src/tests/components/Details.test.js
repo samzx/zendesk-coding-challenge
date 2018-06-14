@@ -3,10 +3,19 @@ import { shallow } from "enzyme";
 
 import Details from "../../components/Details";
 import { toReadableTime } from "../../components/Details";
+import { response } from "../fixtures/response.fixtures";
 
 describe("<Details/>", () => {
-  it("should render Details correctly", () => {
+  it("should render Details correctly with no data, no ticket selected", () => {
     const wrapper = shallow(<Details />);
+    expect(wrapper).toMatchSnapshot();
+  });
+  it("should render Details correctly with data, no ticket selected", () => {
+    const wrapper = shallow(<Details data={response} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+  it("should render Details correctly with data, with ticket 276 selected", () => {
+    const wrapper = shallow(<Details data={response} currentTicket={276} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
