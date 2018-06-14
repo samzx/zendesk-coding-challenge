@@ -6,7 +6,6 @@ exports[`<List /> should render List with data 1`] = `
 >
   <Listing
     id={276}
-    index={0}
     key="listing-0"
     listing={
       Object {
@@ -63,7 +62,6 @@ Id in ipsum aliquip nulla est aliquip labore magna occaecat irure. Tempor amet a
   />
   <Listing
     id={277}
-    index={1}
     key="listing-1"
     listing={
       Object {
@@ -120,7 +118,6 @@ Veniam fugiat laboris Lorem laborum mollit id ad incididunt. Ad nisi labore inci
   />
   <Listing
     id={278}
-    index={2}
     key="listing-2"
     listing={
       Object {
@@ -177,7 +174,6 @@ Magna minim in velit esse quis cupidatat nisi incididunt labore. Duis sunt conse
   />
   <Listing
     id={272}
-    index={3}
     key="listing-3"
     listing={
       Object {
@@ -234,7 +230,6 @@ Ut quis anim cillum elit laboris cupidatat. Non exercitation ipsum do sunt cupid
   />
   <Listing
     id={273}
-    index={4}
     key="listing-4"
     listing={
       Object {
@@ -291,7 +286,6 @@ Minim duis quis duis cupidatat. Ut do minim cupidatat laborum elit nostrud volup
   />
   <Listing
     id={274}
-    index={5}
     key="listing-5"
     listing={
       Object {
@@ -348,7 +342,6 @@ Nulla nulla nostrud esse dolor cillum nostrud consequat deserunt officia incidid
   />
   <Listing
     id={275}
-    index={6}
     key="listing-6"
     listing={
       Object {
@@ -405,7 +398,6 @@ Magna ex ipsum mollit anim commodo esse laboris. Dolor deserunt nisi veniam aliq
   />
   <Listing
     id={269}
-    index={7}
     key="listing-7"
     listing={
       Object {
@@ -462,7 +454,6 @@ Officia nulla proident culpa occaecat anim labore consequat esse ullamco culpa e
   />
   <Listing
     id={270}
-    index={8}
     key="listing-8"
     listing={
       Object {
@@ -518,7 +509,6 @@ Ullamco enim velit adipisicing proident aliqua magna amet eiusmod sint ad. In al
   />
   <Listing
     id={268}
-    index={9}
     key="listing-9"
     listing={
       Object {
@@ -574,7 +564,6 @@ Nisi minim fugiat Lorem sit minim nostrud ut nostrud in velit aliqua incididunt 
   />
   <Listing
     id={271}
-    index={10}
     key="listing-10"
     listing={
       Object {
@@ -631,7 +620,6 @@ Est non eu laborum adipisicing irure commodo. Cillum occaecat reprehenderit enim
   />
   <Listing
     id={267}
-    index={11}
     key="listing-11"
     listing={
       Object {
@@ -688,7 +676,6 @@ Dolore aute et duis laborum incididunt cillum nulla et. Magna dolor aliqua ad do
   />
   <Listing
     id={264}
-    index={12}
     key="listing-12"
     listing={
       Object {
@@ -745,7 +732,6 @@ Occaecat laboris qui culpa exercitation voluptate. Nostrud pariatur sint Lorem q
   />
   <Listing
     id={265}
-    index={13}
     key="listing-13"
     listing={
       Object {
@@ -802,7 +788,6 @@ Quis non nulla nostrud ex cupidatat do. Dolor occaecat aute id nisi qui nulla Lo
   />
   <Listing
     id={266}
-    index={14}
     key="listing-14"
     listing={
       Object {
@@ -859,7 +844,6 @@ Labore tempor mollit irure labore duis culpa fugiat consequat aute amet proident
   />
   <Listing
     id={262}
-    index={15}
     key="listing-15"
     listing={
       Object {
@@ -916,7 +900,6 @@ Labore cupidatat Lorem esse est ad nulla aute mollit sunt do consequat adipisici
   />
   <Listing
     id={263}
-    index={16}
     key="listing-16"
     listing={
       Object {
@@ -973,7 +956,6 @@ In cupidatat incididunt proident veniam non mollit consequat aliqua. Veniam adip
   />
   <Listing
     id={260}
-    index={17}
     key="listing-17"
     listing={
       Object {
@@ -1030,7 +1012,6 @@ Velit proident ad dolore consequat ipsum in cupidatat dolore reprehenderit. Inci
   />
   <Listing
     id={261}
-    index={18}
     key="listing-18"
     listing={
       Object {
@@ -1087,7 +1068,6 @@ Voluptate dolor reprehenderit id labore fugiat ullamco enim dolore duis. Et proi
   />
   <Listing
     id={257}
-    index={19}
     key="listing-19"
     listing={
       Object {
@@ -1144,7 +1124,6 @@ Anim tempor in aute mollit do deserunt consectetur officia et adipisicing offici
   />
   <Listing
     id={258}
-    index={20}
     key="listing-20"
     listing={
       Object {
@@ -1201,7 +1180,6 @@ Minim anim minim ullamco laborum do ad. Esse qui fugiat sunt cupidatat Lorem tem
   />
   <Listing
     id={259}
-    index={21}
     key="listing-21"
     listing={
       Object {
@@ -1258,7 +1236,6 @@ Pariatur eu consequat quis nisi cillum laborum tempor cillum consequat dolor ips
   />
   <Listing
     id={256}
-    index={22}
     key="listing-22"
     listing={
       Object {
@@ -1315,7 +1292,6 @@ In aliquip amet non consectetur occaecat veniam ex culpa fugiat adipisicing. Vol
   />
   <Listing
     id={253}
-    index={23}
     key="listing-23"
     listing={
       Object {
@@ -1372,7 +1348,6 @@ Adipisicing esse aute eiusmod laboris aute aliquip. Laboris irure eu velit exerc
   />
   <Listing
     id={254}
-    index={24}
     key="listing-24"
     listing={
       Object {
