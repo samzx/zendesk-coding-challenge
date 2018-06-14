@@ -32,7 +32,7 @@ class Listing extends React.Component {
   // Visual Status: Open, Pending, Closed - colors
 
   render() {
-    const { listing, index } = this.props;
+    const { listing } = this.props;
     return (
       listing && (
         <div className="listing" onClick={this.handleClick}>

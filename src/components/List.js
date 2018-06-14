@@ -13,7 +13,6 @@ class List extends React.Component {
       <Listing
         listing={listing}
         id={listing.id}
-        index={index}
         key={`listing-${index}`}
         currentTicket={this.props.currentTicket}
         setTicket={this.props.setTicket}
