@@ -10,7 +10,9 @@ describe("<Listing />", () => {
     expect(wrapper).toMatchSnapshot();
   });
   it("should render Listing correctly", () => {
-    const wrapper = shallow(<Listing listing={response.tickets[firstElement.id]} />);
+    const wrapper = shallow(
+      <Listing listing={response.tickets[firstElement.id]} />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });

@@ -20,7 +20,9 @@ describe("<Ticket />", () => {
     expect(wrapper).toMatchSnapshot();
   });
   it("should render Ticket correctly with data, with current ticket", () => {
-    const wrapper = shallow(<Ticket data={response} currentTicket={firstElement.id} />);
+    const wrapper = shallow(
+      <Ticket data={response} currentTicket={firstElement.id} />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });

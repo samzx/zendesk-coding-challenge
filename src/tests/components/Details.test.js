@@ -15,7 +15,9 @@ describe("<Details/>", () => {
     expect(wrapper).toMatchSnapshot();
   });
   it("should render Details correctly with data, with ticket 276 selected", () => {
-    const wrapper = shallow(<Details data={response} currentTicket={firstElement.id} />);
+    const wrapper = shallow(
+      <Details data={response} currentTicket={firstElement.id} />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });
