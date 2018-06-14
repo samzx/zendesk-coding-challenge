@@ -1,7 +1,7 @@
 import React from "react";
 
 import Listing from "./Listing";
-import { itemsPerPage } from "../constants/constants";
+import { listingsPerPage } from "../constants/constants";
 
 class List extends React.Component {
   scrollToTop = () => {
@@ -9,10 +9,10 @@ class List extends React.Component {
   };
 
   generateList = tickets => {
-    return tickets.map((item, index) => (
+    return tickets.map((listing, index) => (
       <Listing
-        item={item}
-        id={item.id}
+        listing={listing}
+        id={listing.id}
         index={index}
         key={`listing-${index}`}
         currentTicket={this.props.currentTicket}

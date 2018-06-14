@@ -7,7 +7,8 @@ exports[`<List /> should render List with data 1`] = `
   <Listing
     id={276}
     index={0}
-    item={
+    key="listing-0"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -59,12 +60,12 @@ Id in ipsum aliquip nulla est aliquip labore magna occaecat irure. Tempor amet a
         },
       }
     }
-    key="listing-0"
   />
   <Listing
     id={277}
     index={1}
-    item={
+    key="listing-1"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -116,12 +117,12 @@ Veniam fugiat laboris Lorem laborum mollit id ad incididunt. Ad nisi labore inci
         },
       }
     }
-    key="listing-1"
   />
   <Listing
     id={278}
     index={2}
-    item={
+    key="listing-2"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -173,12 +174,12 @@ Magna minim in velit esse quis cupidatat nisi incididunt labore. Duis sunt conse
         },
       }
     }
-    key="listing-2"
   />
   <Listing
     id={272}
     index={3}
-    item={
+    key="listing-3"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -230,12 +231,12 @@ Ut quis anim cillum elit laboris cupidatat. Non exercitation ipsum do sunt cupid
         },
       }
     }
-    key="listing-3"
   />
   <Listing
     id={273}
     index={4}
-    item={
+    key="listing-4"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -287,12 +288,12 @@ Minim duis quis duis cupidatat. Ut do minim cupidatat laborum elit nostrud volup
         },
       }
     }
-    key="listing-4"
   />
   <Listing
     id={274}
     index={5}
-    item={
+    key="listing-5"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -344,12 +345,12 @@ Nulla nulla nostrud esse dolor cillum nostrud consequat deserunt officia incidid
         },
       }
     }
-    key="listing-5"
   />
   <Listing
     id={275}
     index={6}
-    item={
+    key="listing-6"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -401,12 +402,12 @@ Magna ex ipsum mollit anim commodo esse laboris. Dolor deserunt nisi veniam aliq
         },
       }
     }
-    key="listing-6"
   />
   <Listing
     id={269}
     index={7}
-    item={
+    key="listing-7"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -458,12 +459,12 @@ Officia nulla proident culpa occaecat anim labore consequat esse ullamco culpa e
         },
       }
     }
-    key="listing-7"
   />
   <Listing
     id={270}
     index={8}
-    item={
+    key="listing-8"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -514,12 +515,12 @@ Ullamco enim velit adipisicing proident aliqua magna amet eiusmod sint ad. In al
         },
       }
     }
-    key="listing-8"
   />
   <Listing
     id={268}
     index={9}
-    item={
+    key="listing-9"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -570,12 +571,12 @@ Nisi minim fugiat Lorem sit minim nostrud ut nostrud in velit aliqua incididunt 
         },
       }
     }
-    key="listing-9"
   />
   <Listing
     id={271}
     index={10}
-    item={
+    key="listing-10"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -627,12 +628,12 @@ Est non eu laborum adipisicing irure commodo. Cillum occaecat reprehenderit enim
         },
       }
     }
-    key="listing-10"
   />
   <Listing
     id={267}
     index={11}
-    item={
+    key="listing-11"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -684,12 +685,12 @@ Dolore aute et duis laborum incididunt cillum nulla et. Magna dolor aliqua ad do
         },
       }
     }
-    key="listing-11"
   />
   <Listing
     id={264}
     index={12}
-    item={
+    key="listing-12"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -741,12 +742,12 @@ Occaecat laboris qui culpa exercitation voluptate. Nostrud pariatur sint Lorem q
         },
       }
     }
-    key="listing-12"
   />
   <Listing
     id={265}
     index={13}
-    item={
+    key="listing-13"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -798,12 +799,12 @@ Quis non nulla nostrud ex cupidatat do. Dolor occaecat aute id nisi qui nulla Lo
         },
       }
     }
-    key="listing-13"
   />
   <Listing
     id={266}
     index={14}
-    item={
+    key="listing-14"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -855,12 +856,12 @@ Labore tempor mollit irure labore duis culpa fugiat consequat aute amet proident
         },
       }
     }
-    key="listing-14"
   />
   <Listing
     id={262}
     index={15}
-    item={
+    key="listing-15"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -912,12 +913,12 @@ Labore cupidatat Lorem esse est ad nulla aute mollit sunt do consequat adipisici
         },
       }
     }
-    key="listing-15"
   />
   <Listing
     id={263}
     index={16}
-    item={
+    key="listing-16"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -969,12 +970,12 @@ In cupidatat incididunt proident veniam non mollit consequat aliqua. Veniam adip
         },
       }
     }
-    key="listing-16"
   />
   <Listing
     id={260}
     index={17}
-    item={
+    key="listing-17"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -1026,12 +1027,12 @@ Velit proident ad dolore consequat ipsum in cupidatat dolore reprehenderit. Inci
         },
       }
     }
-    key="listing-17"
   />
   <Listing
     id={261}
     index={18}
-    item={
+    key="listing-18"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -1083,12 +1084,12 @@ Voluptate dolor reprehenderit id labore fugiat ullamco enim dolore duis. Et proi
         },
       }
     }
-    key="listing-18"
   />
   <Listing
     id={257}
     index={19}
-    item={
+    key="listing-19"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -1140,12 +1141,12 @@ Anim tempor in aute mollit do deserunt consectetur officia et adipisicing offici
         },
       }
     }
-    key="listing-19"
   />
   <Listing
     id={258}
     index={20}
-    item={
+    key="listing-20"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -1197,12 +1198,12 @@ Minim anim minim ullamco laborum do ad. Esse qui fugiat sunt cupidatat Lorem tem
         },
       }
     }
-    key="listing-20"
   />
   <Listing
     id={259}
     index={21}
-    item={
+    key="listing-21"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -1254,12 +1255,12 @@ Pariatur eu consequat quis nisi cillum laborum tempor cillum consequat dolor ips
         },
       }
     }
-    key="listing-21"
   />
   <Listing
     id={256}
     index={22}
-    item={
+    key="listing-22"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -1311,12 +1312,12 @@ In aliquip amet non consectetur occaecat veniam ex culpa fugiat adipisicing. Vol
         },
       }
     }
-    key="listing-22"
   />
   <Listing
     id={253}
     index={23}
-    item={
+    key="listing-23"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -1368,12 +1369,12 @@ Adipisicing esse aute eiusmod laboris aute aliquip. Laboris irure eu velit exerc
         },
       }
     }
-    key="listing-23"
   />
   <Listing
     id={254}
     index={24}
-    item={
+    key="listing-24"
+    listing={
       Object {
         "allow_attachments": true,
         "allow_channelback": false,
@@ -1425,7 +1426,6 @@ Cupidatat ad et sit officia ut. Deserunt id elit ea velit esse pariatur magna mo
         },
       }
     }
-    key="listing-24"
   />
 </div>
 `;

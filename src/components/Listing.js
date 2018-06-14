@@ -32,24 +32,24 @@ class Listing extends React.Component {
   // Visual Status: Open, Pending, Closed - colors
 
   render() {
-    const { item, index } = this.props;
+    const { listing, index } = this.props;
     return (
-      item && (
+      listing && (
         <div className="listing" onClick={this.handleClick}>
           <div className="listing--left">
             <div className="listing-subject">
-              <h3>{item.subject}</h3>
+              <h3>{listing.subject}</h3>
             </div>
             <div className="listing-time">
-              <p>{this.shortenTime(toReadableTime(item.created_at))}</p>
+              <p>{this.shortenTime(toReadableTime(listing.created_at))}</p>
             </div>
           </div>
           <div className="listing--right">
             <div className="listing-type">
-              <h3>{item.type}</h3>
+              <h3>{listing.type}</h3>
             </div>
             <div className="listing-priority">
-              <p>{this.visualPriority(item.priority)}</p>
+              <p>{this.visualPriority(listing.priority)}</p>
             </div>
           </div>
         </div>

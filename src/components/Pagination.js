@@ -1,11 +1,11 @@
 import React from "react";
 
-import { itemsPerPage } from "../constants/constants";
+import { listingsPerPage } from "../constants/constants";
 
 class Pagination extends React.Component {
   createPagination = count => {
     let numPages =
-      Math.floor(count / itemsPerPage) + (count % itemsPerPage > 0 && 1);
+      Math.floor(count / listingsPerPage) + (count % listingsPerPage > 0 && 1);
     let arr = [];
     for (let i = 1; i <= numPages; i++) {
       arr.push(i);

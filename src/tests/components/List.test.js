@@ -25,9 +25,7 @@ describe("<List />'s generateList function", () => {
   });
   it("should generate 25 Listings", () => {
     const wrapper = shallow(<List />);
-    expect(wrapper.instance().generateList(response.tickets)).toHaveLength(
-      25
-    );
+    expect(wrapper.instance().generateList(response.tickets)).toHaveLength(25);
   });
   it("should generate 0 Listings", () => {
     const wrapper = shallow(<List />);
