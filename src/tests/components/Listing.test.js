@@ -2,7 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import Listing from "../../components/Listing";
 
-import { response } from "../fixtures/response.fixtures";
+import { response, firstElement } from "../fixtures/response.fixtures";
 
 describe("<Listing />", () => {
   it("should render Listing correctly", () => {
@@ -10,7 +10,7 @@ describe("<Listing />", () => {
     expect(wrapper).toMatchSnapshot();
   });
   it("should render Listing correctly", () => {
-    const wrapper = shallow(<Listing listing={response.tickets[0]} />);
+    const wrapper = shallow(<Listing listing={response.tickets[firstElement.id]} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

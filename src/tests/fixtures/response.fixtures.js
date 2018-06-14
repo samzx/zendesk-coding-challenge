@@ -1,3 +1,8 @@
+export const firstElement = {
+  index: 0,
+  id: 276
+}
+
 export const response = {
   tickets: [
     {

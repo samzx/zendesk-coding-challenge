@@ -2,17 +2,16 @@ import React from "react";
 import { shallow } from "enzyme";
 import Ticket from "../../components/Ticket";
 
-import { response } from "../fixtures/response.fixtures";
+import { response, firstElement } from "../fixtures/response.fixtures";
 
 describe("<Ticket />", () => {
-  const id = 276;
   it("should render Ticket correctly without data, without current ticket", () => {
     const wrapper = shallow(<Ticket />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it("should render Ticket correctly without data, with current ticket", () => {
-    const wrapper = shallow(<Ticket currentTicket={id} />);
+    const wrapper = shallow(<Ticket currentTicket={firstElement.id} />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -21,7 +20,7 @@ describe("<Ticket />", () => {
     expect(wrapper).toMatchSnapshot();
   });
   it("should render Ticket correctly with data, with current ticket", () => {
-    const wrapper = shallow(<Ticket data={response} currentTicket={id} />);
+    const wrapper = shallow(<Ticket data={response} currentTicket={firstElement.id} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
