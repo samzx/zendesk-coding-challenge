@@ -21,7 +21,7 @@ exports[`<Details/> should render Details correctly with data, with ticket 276 s
       className="details--created"
     >
       Created 
-      Thu Jun 07 2018 23:13:13
+      6/7/2018, 11:13:13 PM
     </p>
     <table
       className="details--table"

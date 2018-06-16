@@ -25,9 +25,9 @@ describe("<Details/>", () => {
 describe("<Details />'s time display", () => {
   it("should shorten time to be easier to read given a valid date string", () => {
     const wrapper = shallow(<Details />);
-    expect(
-      wrapper.instance().shortenTime("2018-06-07T13:13:19Z")
-    ).toEqual("Thu Jun 07 2018 23:13:19");
+    expect(wrapper.instance().shortenTime("2018-06-07T13:13:19Z")).toEqual(
+      "6/7/2018, 11:13:19 PM"
+    );
   });
   it("should not show time given a invalid date string", () => {
     const wrapper = shallow(<Details />);

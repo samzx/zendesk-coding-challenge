@@ -1,12 +1,11 @@
 import React from "react";
 
 class Details extends React.Component {
-
   shortenTime = timeString => {
     const date = new Date(timeString);
-    if(date.toDateString() == "Invalid Date") return "";
-    return `${date.toDateString()} ${date.toLocaleTimeString()}`;
-  }
+    if (date.toDateString() == "Invalid Date") return "";
+    return date.toLocaleString("en-US");
+  };
 
   createTitleRow = titleArr => {
     return (

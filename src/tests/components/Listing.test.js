@@ -43,9 +43,9 @@ describe("<Listing />'s priority display", () => {
 describe("<Listing />'s time display", () => {
   it("should shorten time to be easier to read given a valid date string", () => {
     const wrapper = shallow(<Listing />);
-    expect(
-      wrapper.instance().shortenTime("2018-06-07T13:13:19Z")
-    ).toEqual("Thu Jun 07 2018");
+    expect(wrapper.instance().shortenTime("2018-06-07T13:13:19Z")).toEqual(
+      "Thu Jun 07 2018"
+    );
   });
   it("should not show time given a invalid date string", () => {
     const wrapper = shallow(<Listing />);

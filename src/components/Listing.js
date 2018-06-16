@@ -8,7 +8,7 @@ class Listing extends React.Component {
 
   shortenTime = timeString => {
     const date = new Date(timeString);
-    if(date.toDateString() == "Invalid Date") return "";
+    if (date.toDateString() == "Invalid Date") return "";
     return date.toDateString();
   };
 
