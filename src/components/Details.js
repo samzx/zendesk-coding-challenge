@@ -1,11 +1,13 @@
 import React from "react";
 
-export const toReadableTime = dateString => {
-  const date = new Date(dateString);
-  return date.toString();
-};
-
 class Details extends React.Component {
+
+  shortenTime = timeString => {
+    const date = new Date(timeString);
+    if(date.toDateString() == "Invalid Date") return "";
+    return `${date.toDateString()} ${date.toLocaleTimeString()}`;
+  }
+
   createTitleRow = titleArr => {
     return (
       <tr>
@@ -54,7 +56,7 @@ class Details extends React.Component {
         <div>
           <h3 className="details--id">Ticket {id}</h3>
           <p className="details--created">
-            Created {toReadableTime(created_at)}
+            Created {this.shortenTime(created_at)}
           </p>
           <table className="details--table">
             <tbody>

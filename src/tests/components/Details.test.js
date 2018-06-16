@@ -22,9 +22,15 @@ describe("<Details/>", () => {
   });
 });
 
-describe("<Details/>'s toReadableTime function", () => {
-  it("converts time to be more readable", () => {
-    const readable = toReadableTime("2018-06-07T13:13:19Z");
-    expect(readable).toEqual("Thu Jun 07 2018 23:13:19 GMT+1000 (AEST)");
+describe("<Details />'s time display", () => {
+  it("should shorten time to be easier to read given a valid date string", () => {
+    const wrapper = shallow(<Details />);
+    expect(
+      wrapper.instance().shortenTime("2018-06-07T13:13:19Z")
+    ).toEqual("Thu Jun 07 2018 23:13:19");
+  });
+  it("should not show time given a invalid date string", () => {
+    const wrapper = shallow(<Details />);
+    expect(wrapper.instance().shortenTime("abcdefg")).toEqual("");
   });
 });

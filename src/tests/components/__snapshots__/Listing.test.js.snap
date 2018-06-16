@@ -21,7 +21,7 @@ exports[`<Listing /> should render Listing correctly 2`] = `
       className="listing-time"
     >
       <p>
-        Thu Jun 07 2018 23:13:13
+        Thu Jun 07 2018
       </p>
     </div>
   </div>

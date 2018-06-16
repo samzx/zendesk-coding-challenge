@@ -1,7 +1,5 @@
 import React from "react";
 
-import { toReadableTime } from "./Details";
-
 class Listing extends React.Component {
   handleClick = () => {
     if (this.props.loading) return;
@@ -9,14 +7,9 @@ class Listing extends React.Component {
   };
 
   shortenTime = timeString => {
-    try {
-      timeString = new Date(timeString).toString();
-      const timeZoneIndex = timeString.indexOf("GMT");
-      return timeString.substring(0, timeZoneIndex).trim();
-    } catch (e) {
-      console.log("Could not parse time.", e);
-      return "";
-    }
+    const date = new Date(timeString);
+    if(date.toDateString() == "Invalid Date") return "";
+    return date.toDateString();
   };
 
   visualPriority = string => {
@@ -39,7 +32,7 @@ class Listing extends React.Component {
               <h3>{listing.subject}</h3>
             </div>
             <div className="listing-time">
-              <p>{this.shortenTime(toReadableTime(listing.created_at))}</p>
+              <p>{this.shortenTime(listing.created_at)}</p>
             </div>
           </div>
           <div className="listing--right">
