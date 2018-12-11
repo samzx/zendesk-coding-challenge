@@ -1,4 +1,4 @@
-# zendesk-coding-challenge
+# Zendesk Coding Challenge
 
 A mobile ticket viewer for Zendesk's coding challenge.
 
