@@ -4,6 +4,7 @@ import Pagination from "./Pagination";
 import List from "./List";
 
 import { url, tickets, listingsPerPage } from "../constants/constants";
+import ticketsFixture from "../../tickets-fixture"
 
 const initialPage = 1;
 
@@ -16,6 +17,10 @@ class Drawer extends React.Component {
 
   fetchListings = page => {
     if (this.state.loading || this.state.currentPage === page) return;
+    if (window.location.href.match(/.*\/demo$/)) {
+      this.props.setData(ticketsFixture)
+      return;
+    }
     this.setState({ currentPage: page, loading: true });
     fetch(url + tickets + `/${listingsPerPage}` + `/${page}`, {
       method: "GET"
