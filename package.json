@@ -30,7 +30,7 @@
     "react-modal": "^3.4.5",
     "sass-loader": "6.0.6",
     "style-loader": "0.18.2",
-    "webpack": "3.1.0"
+    "webpack": "5.94.0"
   },
   "devDependencies": {
     "babel-jest": "^23.0.1",
